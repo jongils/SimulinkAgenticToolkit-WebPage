@@ -6,137 +6,143 @@
 <title>Simulink Agentic Toolkit News</title>
 <style>
   :root {
-    --mw-blue: #0076a8;
-    --mw-dark: #14202c;
-    --mw-purple: #6b3fa0;
-    --mw-bg: #f4f7fa;
-    --mw-border: #dbe4ec;
-    --mw-accent: #e8a33d;
+    --navy: #0e2a47;
+    --blue: #0076a8;
+    --purple: #7b3fe4;
+    --accent: #d95319;
+    --bg: #0e2a47;
+    --card-bg: #ffffff;
+    --border: #dfe5ec;
+    --text: #1c2733;
+    --muted: #5b6b7c;
   }
   * { box-sizing: border-box; }
   body {
     margin: 0;
     padding: 0;
-    background: var(--mw-bg);
-    color: #1f2d3a;
-    font-family: "Segoe UI", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+    background: #f5f7fa;
+    color: var(--text);
+    font-family: "Segoe UI", "Malgun Gothic", "Apple SD Gothic Neo", Helvetica, Arial, sans-serif;
     line-height: 1.65;
   }
   .wrap { max-width: 920px; margin: 0 auto; padding: 0 24px 64px; }
   header.hero {
-    background: radial-gradient(circle at 20% 20%, #1e3a5f 0%, var(--mw-dark) 45%, #100a1a 100%);
+    background: radial-gradient(circle at 20% 20%, #1c3f66, #0b1e33 70%);
+    background-image: linear-gradient(135deg, #101d3a 0%, #17335c 45%, #6a2fc7 100%);
     color: #fff;
     padding: 72px 24px 56px;
+    margin-bottom: 36px;
     text-align: center;
-    position: relative;
-    overflow: hidden;
   }
-  header.hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(120deg, rgba(0,118,168,0.35), rgba(107,63,160,0.35));
-    pointer-events: none;
-  }
-  header.hero .inner { position: relative; }
-  .kicker {
+  header.hero .kicker {
     display: inline-block;
     font-size: 12px;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: #9fd8f0;
+    color: #b9d4ea;
     margin-bottom: 18px;
     font-weight: 600;
   }
-  h1.title {
+  header.hero h1 {
     margin: 0;
     font-size: 52px;
     font-weight: 800;
     letter-spacing: -1px;
-    background: linear-gradient(90deg, #6ec6ff, #b98bff, #ffb86e);
+    line-height: 1.1;
+    background: linear-gradient(90deg, #7ad0ff, #b98bff 60%, #ff9fd6);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    line-height: 1.15;
   }
-  .date-badge {
+  header.hero .badge {
     display: inline-block;
     margin-top: 24px;
-    background: rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.12);
     border: 1px solid rgba(255,255,255,0.3);
     border-radius: 999px;
-    padding: 8px 22px;
+    padding: 7px 20px;
     font-size: 14px;
-    color: #eaf4fb;
-    backdrop-filter: blur(2px);
+    color: #eaf3fb;
+    letter-spacing: 0.5px;
   }
   h2 {
-    font-size: 21px;
-    color: var(--mw-dark);
-    border-bottom: 2px solid var(--mw-blue);
+    font-size: 22px;
+    border-bottom: 3px solid var(--blue);
     padding-bottom: 8px;
     margin-top: 44px;
+    color: var(--navy);
   }
-  h3 {
+  h3.repo-title {
     font-size: 17px;
-    color: var(--mw-blue);
     margin-top: 28px;
     margin-bottom: 6px;
+    color: var(--navy);
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
-  h3 .ver {
-    font-weight: normal;
-    font-size: 13px;
-    color: #5a6b7a;
-    background: var(--mw-border);
-    border-radius: 4px;
+  h3.repo-title .ver {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--blue);
+    background: #e6f1f8;
+    border: 1px solid #c7e0ee;
+    border-radius: 6px;
     padding: 2px 8px;
-    margin-left: 8px;
   }
   .card {
-    background: #fff;
-    border: 1px solid var(--mw-border);
+    background: var(--card-bg);
+    border: 1px solid var(--border);
     border-radius: 10px;
     padding: 20px 24px;
-    margin-bottom: 16px;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+    margin-top: 14px;
   }
-  ul { padding-left: 22px; margin: 8px 0; }
-  li { margin-bottom: 6px; }
+  ul { padding-left: 22px; margin: 10px 0; }
+  li { margin-bottom: 8px; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 14px;
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 12px;
+    text-align: left;
+  }
+  th {
+    background: #eef3f8;
+    color: var(--navy);
+  }
+  tr:nth-child(even) td { background: #fafcfe; }
   code {
-    background: #eef2f6;
+    background: #eef1f5;
+    border: 1px solid #dde3ea;
     border-radius: 4px;
-    padding: 2px 6px;
-    font-family: Consolas, "D2Coding", monospace;
+    padding: 1px 6px;
+    font-family: Consolas, "SFMono-Regular", Menlo, monospace;
     font-size: 13px;
   }
-  .note {
-    background: #fff8e8;
-    border-left: 4px solid var(--mw-accent);
-    padding: 10px 16px;
-    border-radius: 4px;
-    font-size: 14px;
-    margin: 12px 0;
-  }
   .repo-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
+    display: inline-block;
     margin-top: 14px;
-    background: var(--mw-blue);
+    background: var(--blue);
     color: #fff !important;
     text-decoration: none;
-    font-size: 14px;
     font-weight: 600;
+    font-size: 14px;
     padding: 9px 18px;
-    border-radius: 999px;
+    border-radius: 8px;
   }
-  .repo-link:hover { background: #005f8a; }
+  .repo-link:hover { background: var(--navy); }
+  a { color: var(--blue); }
+  .muted { color: var(--muted); font-size: 13px; }
   footer {
-    margin-top: 56px;
+    margin-top: 48px;
     padding-top: 16px;
-    border-top: 1px solid var(--mw-border);
+    border-top: 1px solid var(--border);
     font-size: 12px;
-    color: #7a8a99;
+    color: var(--muted);
     text-align: center;
   }
 </style>
@@ -144,78 +150,112 @@
 <body>
 
 <header class="hero">
-  <div class="inner">
-    <span class="kicker">Release Update</span>
-    <h1 class="title">Simulink Agentic Toolkit News</h1>
-    <div class="date-badge">빌드 날짜: 2026-08-13</div>
-  </div>
+  <span class="kicker">Release Update</span>
+  <h1>Simulink Agentic Toolkit News</h1>
+  <div class="badge">빌드 날짜 2026-08-13</div>
 </header>
 
 <div class="wrap">
 
-  <h2>이번 빌드의 변경사항</h2>
-  <p>matlab-mcp-server, simulink-agentic-toolkit, matlab-agentic-toolkit 세 저장소의 최신 릴리스 변경 내용을 정리했습니다.</p>
+  <p class="muted">MATLAB / Simulink Agentic Toolkit 생태계의 세 저장소에서 최근 발표된 변경사항을 한눈에 확인하세요.</p>
 
+  <h2>이번 업데이트의 변경사항</h2>
+
+  <h3 class="repo-title">matlab-mcp-server <span class="ver">v0.11.3</span></h3>
   <div class="card">
-    <h3>matlab-mcp-server <span class="ver">v0.11.3</span></h3>
+    <p><strong>개선 사항</strong></p>
     <ul>
-      <li><strong>보안 강화 — <code>restoredefaultpath</code> 호출 보호</strong>: <code>restoredefaultpath</code> 호출 주변에 보호 로직이 추가되어, 의도치 않게 MATLAB 경로 설정이 초기화되는 상황을 방지합니다.</li>
-      <li><strong><code>run_matlab_file</code> 툴의 파일 경로 검증 추가</strong>: 이제 <code>run_matlab_file</code> 툴이 파일을 실행하기 전에 MATLAB 파일 경로의 유효성을 먼저 검사합니다. 잘못되었거나 존재하지 않는 경로로 인한 예기치 않은 동작을 줄여줍니다.</li>
-      <li><strong>의존성 업데이트로 CVE 해소</strong>: 알려진 보안 취약점(CVE)을 해결하기 위해 서버가 사용하는 의존 라이브러리들이 최신 버전으로 갱신되었습니다.</li>
+      <li><code>restoredefaultpath</code> 호출 시 발생할 수 있는 문제를 막기 위한 보호 로직이 추가되었습니다.</li>
+      <li><code>run_matlab_file</code> 도구가 MATLAB 파일을 실행하기 전에 파일 경로를 먼저 검증하도록 개선되어, 잘못된 경로로 인한 오류를 사전에 방지합니다.</li>
+      <li>알려진 CVE(보안 취약점)를 해소하기 위해 내부 종속 패키지들이 업데이트되었습니다.</li>
     </ul>
   </div>
 
+  <h3 class="repo-title">simulink-agentic-toolkit <span class="ver">2026.08.12</span></h3>
   <div class="card">
-    <h3>simulink-agentic-toolkit <span class="ver">2026.08.12</span></h3>
     <p><strong>새로운 기능</strong></p>
     <ul>
-      <li><strong><code>simulink-use-c-function-block</code> 스킬 신규 추가</strong>: 에이전트가 Simulink C Function 블록을 구성하여 사용자 정의 C/C++ 코드를 모델에 통합하도록 안내하는 스킬입니다. 기존에는 레거시 S-Function 패턴으로 대체되던 작업을 이제 더 현대적인 방식으로 처리할 수 있습니다.</li>
+      <li><code>simulink-use-c-function-block</code> 스킬이 새로 추가되었습니다. 레거시 S-Function 패턴 대신, 사용자 정의 C/C++ 코드를 Simulink C Function 블록에 통합하도록 에이전트를 안내합니다.</li>
     </ul>
     <p><strong>스킬 및 도구 개선</strong></p>
     <ul>
-      <li><strong><code>simulating-simulink-models</code> 스킬의 트리거 범위 정교화</strong>: 파라미터 오버라이드, 배치 실행, 사용자 정의 입력 등 구체적인 시뮬레이션 설정을 요청할 때만 활성화되도록 개선되어, 다른 스킬이 처리해야 할 일반적인 모델링 요청에는 더 이상 관여하지 않습니다.</li>
-      <li><strong><code>author-modeladvisor-checks</code> 스킬 기능 확장</strong>: 포맷 템플릿 검사(format-template checks), 구성 파라미터 검사(configuration-parameter checks), 컴파일 후 컨텍스트 검사(post-compile context checks) 등 더 많은 Model Advisor 검사 유형 작성을 지원하며, 레거시 검사를 최신 상세 스타일로 변환하는 기능도 추가되었습니다.</li>
+      <li><code>simulating-simulink-models</code> 스킬이 더 정교해졌습니다. 이제 파라미터 오버라이드, 배치 실행, 사용자 정의 입력 등 구체적인 시뮬레이션 설정을 요청할 때만 활성화되어, 다른 스킬이 더 적합한 일반적인 모델링 요청에는 더 이상 개입하지 않습니다.</li>
+      <li><code>author-modeladvisor-checks</code> 스킬이 더 다양한 Model Advisor 검사 유형(포맷 템플릿 검사, 구성 파라미터 검사, 컴파일 후 컨텍스트 검사)을 지원하며, 레거시 검사를 최신 상세 스타일로 변환하는 기능도 추가되었습니다.</li>
     </ul>
     <p><strong>버그 수정</strong></p>
     <ul>
-      <li><strong><code>model_edit</code>의 <code>Sqrt</code>/<code>Product</code> 블록 오류 수정</strong>: <code>Sqrt</code> 블록을 요청하면 더 이상 역제곱근(1/sqrt(x)) 블록이 생성되지 않고, <code>Product</code> 블록을 요청하면 더 이상 나누기(divide) 블록이 생성되지 않습니다. (이슈 #58, #57)</li>
-      <li><strong><code>Integrator, Second-Order</code> 블록 이름 매칭 오류 수정</strong>: Simulink Library Browser 이름으로 <code>Integrator, Second-Order</code> 블록을 추가하면 이제 표준 Integrator가 아닌 실제 2차 적분기(Second-Order Integrator) 블록이 생성됩니다. (이슈 #55)</li>
-      <li><strong><code>setupAgenticToolkit("update")</code> 다운로드 실패 수정</strong>: 다운로드 타임아웃이 짧아서 느린 네트워크 환경에서 업데이트가 실패하던 문제가 해결되었습니다. (이슈 #59)</li>
-      <li><strong>일반 모델이 섞인 디렉터리의 커스텀 라이브러리 등록 오류 수정</strong>: 라이브러리가 아닌 일반 모델 파일이 함께 있는 디렉터리를 등록할 때 더 이상 실패하지 않으며, 라이브러리가 아닌 파일은 자동으로 건너뜁니다.</li>
-      <li><strong><code>model_edit</code>에서 DateTime 블록 계열 사용 가능</strong>: 에이전트가 모델을 구성할 때 이제 Simulink DateTime 블록 계열을 추가할 수 있습니다.</li>
-      <li><strong>Simscape 물리 포트 레이블링 일관성 개선</strong>: 동일한 포트에 여러 연결이 있는 Simscape 서브시스템에서 모델 개요와 읽기 결과의 포트 레이블이 일관되게 표시됩니다.</li>
-      <li><strong>자동 레이아웃 안정성 개선</strong>: 서로 다른 다이어그램에 대한 연속적인 레이아웃 요청이 더 이상 오류를 일으키지 않으며, 결과를 가져올 수 없을 때 멈추지 않고 빠르게 실패 처리됩니다.</li>
+      <li><code>model_edit</code>이 <code>Sqrt</code>와 <code>Product</code> 블록 요청 시 잘못된 블록을 생성하던 문제가 수정되었습니다. 이제 <code>Sqrt</code> 요청 시 역제곱근(1/sqrt(x)) 블록이 아닌 올바른 제곱근 블록이, <code>Product</code> 요청 시 나눗셈이 아닌 올바른 곱셈 블록이 생성됩니다. (이슈 <a href="https://github.com/matlab/simulink-agentic-toolkit/issues/58">#58</a>, <a href="https://github.com/matlab/simulink-agentic-toolkit/issues/57">#57</a>)</li>
+      <li>Simulink Library Browser 이름으로 <code>Integrator, Second-Order</code> 블록을 추가할 때 일반 Integrator 블록이 생성되던 문제가 수정되어, 이제 올바르게 2차 적분기 블록이 생성됩니다. (<a href="https://github.com/matlab/simulink-agentic-toolkit/issues/55">#55</a>)</li>
+      <li>네트워크 속도가 느린 환경에서 다운로드 타임아웃이 너무 짧아 <code>setupAgenticToolkit("update")</code>가 실패하던 문제가 해결되었습니다. (<a href="https://github.com/matlab/simulink-agentic-toolkit/issues/59">#59</a>)</li>
+      <li>일반 모델 파일이 함께 있는 디렉터리를 사용자 정의 라이브러리로 등록할 때 실패하던 문제가 수정되었습니다. 이제 라이브러리가 아닌 파일은 자동으로 건너뜁니다.</li>
+      <li><code>model_edit</code>에서 Simulink DateTime 블록 계열을 추가할 수 있게 되었습니다.</li>
+      <li>Simscape 서브시스템에서 동일 포트에 여러 연결이 있는 경우, 모델 개요 화면과 읽기 결과의 포트 라벨 표기가 일관되게 개선되었습니다.</li>
+      <li>자동 레이아웃 안정성이 향상되었습니다. 서로 다른 다이어그램에 대해 레이아웃 요청을 연속으로 수행해도 더 이상 오류가 발생하지 않으며, 결과를 얻을 수 없는 경우 무한 대기 대신 빠르게 실패합니다.</li>
     </ul>
-    <p class="empty-note">전체 변경 이력: <a href="https://github.com/matlab/simulink-agentic-toolkit/compare/2026.08.05...2026.08.12">2026.08.05...2026.08.12 비교 보기</a></p>
+    <p class="muted">전체 변경 이력: <a href="https://github.com/matlab/simulink-agentic-toolkit/compare/2026.08.05...2026.08.12">2026.08.05 → 2026.08.12 비교 보기</a></p>
     <a class="repo-link" href="https://github.com/matlab/simulink-agentic-toolkit">저장소 바로가기 →</a>
   </div>
 
+  <h3 class="repo-title">matlab-agentic-toolkit <span class="ver">2026.08.13</span></h3>
   <div class="card">
-    <h3>matlab-agentic-toolkit <span class="ver">2026.08.13</span></h3>
-    <p><strong>기존 스킬 그룹에 신규 스킬 추가</strong></p>
+    <p><strong>기존 스킬 그룹에 추가된 신규 스킬</strong></p>
     <ul>
-      <li><strong>이미지 처리 및 컴퓨터 비전</strong>: 초분광(hyperspectral) 및 다분광(multispectral) 이미지를 읽고, 처리, 분석, 라벨링, 분류하기 위한 <code>matlab-analyze-spectral-images</code> 스킬이 새로 추가되었습니다.</li>
+      <li><strong>영상 처리 및 컴퓨터 비전</strong> — <code>matlab-analyze-spectral-images</code> 스킬이 추가되어, 초분광(hyperspectral) 및 다중분광(multispectral) 영상을 읽고 처리·분석·라벨링·분류하는 작업을 지원합니다.</li>
     </ul>
-    <p><strong>스킬 개선</strong></p>
+    <p><strong>개선된 스킬</strong></p>
     <ul>
-      <li><code>matlab-analyze-data</code> — 함수 핸들 셀렉터 및 in-place 변환을 다루는 <code>convertvars</code> 관련 문서가 확장되었습니다.</li>
-      <li><code>matlab-build-industrial-hmi</code> — App Designer 직렬화(.mlapp 출력)를 위한 <code>matlab-build-app</code> 연계 처리와, 이를 사용할 수 없을 때의 프로그래밍 방식 대체 경로가 추가되었습니다.</li>
-      <li><code>matlab-deploy-ai-model</code> — MATLAB 및 Simulink 워크플로우 모두에 LiteRT™ 코드 생성 지원(<code>loadLiteRTModel</code>)이 추가되었습니다.</li>
-      <li><code>matlab-deploy-embedded-code</code> — ARM® Cortex-A SIMD/CRL 가이드가 개선되었고, Simulink Coder 속성에 대한 참조가 추가되었습니다.</li>
-      <li><code>matlab-design-radar-waveform</code> — 스프레드 스펙트럼 및 위상 코드 파형(M-시퀀스, PN 코드, 이중 기능 레이더-통신 파형) 지원과 스펙트럼 노칭(notching) 참조가 추가되었습니다.</li>
-      <li><code>matlab-generate-code</code> — 호스트-타깃 SIMD 구성(InstructionSetExtensions, SIMDAcceleration, OptimizeReductions)과 lib/dll/exe 및 MEX 타깃용 OpenMP 가이드가 추가되었습니다.</li>
-      <li><code>matlab-install-products</code> — PowerShell 기반 워크플로우에 대해 더 엄격한 파일 생성 규칙을 적용하여 Windows® 에이전트 지원이 강화되었습니다.</li>
+      <li><code>matlab-analyze-data</code> — 함수 핸들 기반 선택자와 인플레이스 변환을 다루는 <code>convertvars</code> 관련 문서가 확장되었습니다.</li>
+      <li><code>matlab-build-industrial-hmi</code> — <code>.mlapp</code> 출력이 필요한 App Designer 직렬화를 위해 <code>matlab-build-app</code>으로의 연계 처리가 추가되었고, 이를 사용할 수 없는 경우를 위한 프로그래밍 방식 대체 경로도 추가되었습니다.</li>
+      <li><code>matlab-deploy-ai-model</code> — MATLAB과 Simulink 워크플로 모두에서 LiteRT™ 코드 생성 지원(<code>loadLiteRTModel</code>)이 추가되었습니다.</li>
+      <li><code>matlab-deploy-embedded-code</code> — ARM® Cortex-A SIMD/CRL 관련 가이드가 보강되었고, Simulink Coder 속성에 대한 참고 자료가 추가되었습니다.</li>
+      <li><code>matlab-design-radar-waveform</code> — 스프레드 스펙트럼 및 위상 부호화 파형(M-시퀀스, PN 코드, 듀얼 기능 레이더-통신 파형) 지원과 스펙트럼 노칭 관련 참고 자료가 추가되었습니다.</li>
+      <li><code>matlab-generate-code</code> — 호스트-타겟 SIMD 구성(InstructionSetExtensions, SIMDAcceleration, OptimizeReductions) 및 lib/dll/exe와 MEX 타겟을 위한 OpenMP 가이드가 추가되었습니다.</li>
+      <li><code>matlab-install-products</code> — PowerShell 기반 워크플로에 대해 더 엄격한 파일 생성 규칙을 적용하여 Windows® 환경에서의 에이전트 지원이 강화되었습니다.</li>
     </ul>
-    <p><strong>호환성 관련 주요 변경사항</strong></p>
-    <ul>
-      <li><strong>22개 스킬 이름 변경</strong>: 툴킷 내 다른 스킬과의 명명 일관성 및 명확성을 위해 22개 스킬의 이름이 변경되었습니다. 이전 스킬을 설치했다면 설치 프로그램을 다시 실행하여 새 버전으로 전환해야 하며, 에이전트 지침 등에서 이전 스킬 이름을 수동으로 참조하고 있다면 함께 갱신해야 합니다.</li>
-      <li><strong>3개 스킬로 통합</strong>: 여러 개별 스킬이 3개의 통합 스킬(<code>matlab-package-toolbox</code>, <code>matlab-connect-databricks</code>, <code>matlab-use-database</code>)로 대체되었습니다. 개별 스킬을 설치했다면 설치 프로그램을 다시 실행하여 통합 버전으로 전환해야 합니다.</li>
-    </ul>
+    <p><strong>호환성 관련 참고 사항</strong></p>
+    <p>명확성과 다른 스킬과의 명명 일관성을 위해 <strong>22개의 스킬 이름이 변경</strong>되었습니다. 이전 스킬을 설치한 경우, 새 버전으로 전환하려면 설치 프로그램을 다시 실행해야 합니다. 에이전트 지침 등에서 이전 스킬 이름을 수동으로 참조하고 있다면 그 부분도 함께 업데이트해야 합니다.</p>
+    <table>
+      <thead><tr><th>이전 이름</th><th>변경된 이름</th></tr></thead>
+      <tbody>
+        <tr><td><code>matlab-debugging</code></td><td><code>matlab-debug-code</code></td></tr>
+        <tr><td><code>matlab-read-doc</code></td><td><code>matlab-read-documentation</code></td></tr>
+        <tr><td><code>matlab-testing</code></td><td><code>matlab-write-test</code></td></tr>
+        <tr><td><code>matlab-theming</code></td><td><code>matlab-apply-theme</code></td></tr>
+        <tr><td><code>matlab-choose-bigdata-solution</code></td><td><code>matlab-choose-big-data-solution</code></td></tr>
+        <tr><td><code>matlab-driving-data-importer</code></td><td><code>matlab-import-driving-data</code></td></tr>
+        <tr><td><code>matlab-ncap-testing</code></td><td><code>matlab-use-ncap-protocol</code></td></tr>
+        <tr><td><code>matlab-scenario-builder</code></td><td><code>matlab-use-scenario-builder</code></td></tr>
+        <tr><td><code>matlab-sharing</code></td><td><code>matlab-share-content</code></td></tr>
+        <tr><td><code>matlab-review-fi-code</code></td><td><code>matlab-review-fi-object-code</code></td></tr>
+        <tr><td><code>matlab-access-from-excel</code></td><td><code>matlab-use-spreadsheet-link</code></td></tr>
+        <tr><td><code>matlab-ocr</code></td><td><code>matlab-recognize-text</code></td></tr>
+        <tr><td><code>matlab-point-cloud-file-io</code></td><td><code>matlab-read-write-point-cloud-file</code></td></tr>
+        <tr><td><code>matlab-point-cloud-registration</code></td><td><code>matlab-register-point-clouds</code></td></tr>
+        <tr><td><code>matlab-setup-worker-state</code></td><td><code>matlab-set-up-worker-state</code></td></tr>
+        <tr><td><code>matlab-design-antennas</code></td><td><code>matlab-design-antenna</code></td></tr>
+        <tr><td><code>matlab-design-pcb-txline</code></td><td><code>matlab-design-pcb-transmission-line</code></td></tr>
+        <tr><td><code>matlab-integrate-antennas</code></td><td><code>matlab-integrate-antenna</code></td></tr>
+        <tr><td><code>matlab-analyze-time-frequency</code></td><td><code>matlab-analyze-time-frequency-content</code></td></tr>
+        <tr><td><code>matlab-dsphdl-ddc-design</code></td><td><code>matlab-design-dsphdl-ddc</code></td></tr>
+        <tr><td><code>matlab-connect-ble</code></td><td><code>matlab-connect-bluetooth-low-energy-device</code></td></tr>
+        <tr><td><code>matlab-vehicle-network-communication</code></td><td><code>matlab-use-vehicle-network</code></td></tr>
+      </tbody>
+    </table>
+    <p>또한 <strong>3개의 통합 스킬</strong>이 여러 기존 스킬을 대체합니다. 개별 스킬을 설치했던 경우, 통합된 버전으로 전환하려면 설치 프로그램을 다시 실행하세요.</p>
+    <table>
+      <thead><tr><th>제거된 스킬</th><th>대체 스킬</th></tr></thead>
+      <tbody>
+        <tr><td><code>matlab-analyze-dependencies</code>, <code>matlab-assess-toolbox</code>, <code>matlab-build-toolbox</code>, <code>matlab-create-buildfile</code>, <code>matlab-create-project</code>, <code>matlab-define-toolbox-api</code>, <code>matlab-document-toolbox</code>, <code>matlab-exclude-files</code>, <code>matlab-publish-toolbox</code></td><td><code>matlab-package-toolbox</code></td></tr>
+        <tr><td><code>matlab-connect-databricks-jdbc</code>, <code>matlab-connect-databricks-spark</code></td><td><code>matlab-connect-databricks</code></td></tr>
+        <tr><td><code>matlab-map-database-objects</code>, <code>matlab-read-database</code>, <code>matlab-write-database</code></td><td><code>matlab-use-database</code></td></tr>
+      </tbody>
+    </table>
   </div>
 
   <footer>
-    Simulink Agentic Toolkit News · 빌드 2026-08-13
+    Simulink Agentic Toolkit News · 빌드 날짜 2026-08-13
   </footer>
+
 </div>
 </body>
 </html>
