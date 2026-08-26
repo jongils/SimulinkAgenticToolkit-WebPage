@@ -1,132 +1,1166 @@
-<!doctype html>
-<html lang="ko"><head><meta charset="utf-8">
-<title>Agentic Engineering Newsletter</title></head>
-<body style="font-family:sans-serif;max-width:760px;margin:40px auto;line-height:1.6">
-<div style="background:linear-gradient(135deg,#0072bd,#d95319);color:#fff;padding:32px 28px;border-radius:10px;margin-bottom:24px">
-<h1 style="margin:0;font-size:32px">Agentic Engineering Newsletter</h1>
-<p style="margin:8px 0 0;opacity:.9">빌드 날짜: <strong>20260820</strong></p>
-</div>
-<p><em>GenAI 생성이 비활성화/실패하여 요약 없이 원문 그대로 표시합니다.</em></p>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MATLAB 및 Simulink Agentic Toolkit 최신 소식을 정리한 Agentic Engineering Newsletter입니다.">
+  <title>Agentic Engineering Newsletter</title>
+  <style>
+    :root {
+      --mw-color-primary: #125687;
+      --mw-color-primary-dark: #125687;
+      --mw-color-accent: #d77600;
+      --mw-color-gray: #555555;
+      --mw-background-primary: #ffffff;
+      --mw-background-canvas: #f5f5f5;
+      --mw-background-muted: #eeeeee;
+      --mw-background-selected: rgba(18, 86, 135, 0.10);
+      --mw-background-note: rgba(215, 118, 0, 0.10);
+      --mw-text-primary: #222222;
+      --mw-text-muted: #555555;
+      --mw-border-subtle: #e0e0e0;
+      --mw-border-strong: #bdbdbd;
+      --mw-focus-ring: #d77600;
+      --mw-shadow-soft: 0 10px 28px rgba(31, 41, 51, 0.08);
+      --page-max: 1240px;
+      --radius: 8px;
+    }
 
-<h3>matlab-mcp-server (v0.12.0)</h3>
-<pre style="white-space:pre-wrap;background:#f4f4f4;padding:12px;border-radius:6px">## New Features
+    * {
+      box-sizing: border-box;
+      min-width: 0;
+    }
 
-- Display a message in MATLAB to inform users when an agent connects using MATLAB MCP Server
+    html {
+      scroll-behavior: smooth;
+    }
 
-We encourage you to try this repository and provide feedback. If you encounter a technical issue or have an enhancement request, create an issue https://github.com/matlab/matlab-mcp-core-server/issues or contact technical support.</pre>
+    body {
+      margin: 0;
+      background: var(--mw-background-canvas);
+      color: var(--mw-text-primary);
+      font-family: "Segoe UI", "Malgun Gothic", "Apple SD Gothic Neo", Arial, sans-serif;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
 
-<h3>simulink-agentic-toolkit (2026.08.19)</h3>
-<p><a href="https://github.com/matlab/simulink-agentic-toolkit" target="_blank" rel="noopener">저장소 바로가기: https://github.com/matlab/simulink-agentic-toolkit</a></p>
-<pre style="white-space:pre-wrap;background:#f4f4f4;padding:12px;border-radius:6px"># SATK v2026.08.19
+    a {
+      color: var(--mw-color-primary);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+      overflow-wrap: anywhere;
+    }
 
-## Quick Start
+    a:hover {
+      color: var(--mw-color-primary-dark);
+    }
 
-### Fresh Install
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid var(--mw-focus-ring);
+      outline-offset: 3px;
+    }
 
-1. Download `agenticToolkitInstaller.mltbx` from the release assets
-2. In MATLAB, double-click the `.mltbx` to install, then run:
+    code {
+      background: #eeeeee;
+      border-radius: 4px;
+      color: #333333;
+      font-family: "Consolas", "Courier New", monospace;
+      font-size: 0.92em;
+      padding: 1px 6px;
+      overflow-wrap: anywhere;
+      white-space: normal;
+      word-break: break-word;
+    }
 
-```
-&gt;&gt; setupAgenticToolkit(&quot;install&quot;)
-```
+    .skip-link {
+      background: #ffffff;
+      color: var(--mw-color-primary);
+      left: 16px;
+      padding: 8px 12px;
+      position: absolute;
+      top: -44px;
+      z-index: 100;
+    }
 
-3. Each MATLAB session, initialize the toolkit:
+    .skip-link:focus {
+      top: 12px;
+    }
 
-```
-&gt;&gt; addpath(&quot;~/.matlab/agentic-toolkits/simulink&quot;)
-&gt;&gt; satk_initialize
-```
+    .site-header {
+      background: var(--mw-color-primary);
+      color: #ffffff;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.16);
+    }
 
-### Update Existing Installation
+    .header-inner {
+      align-items: center;
+      display: flex;
+      gap: 24px;
+      justify-content: space-between;
+      margin: 0 auto;
+      max-width: var(--page-max);
+      min-height: 72px;
+      padding: 12px 28px;
+      width: 100%;
+    }
 
-1. Download `agenticToolkitInstaller.mltbx` from the release assets
-2. Double-click the `.mltbx` to update installer files, then run:
+    .logo-link {
+      align-items: center;
+      display: inline-flex;
+      flex: 0 0 auto;
+      min-width: 170px;
+    }
 
-```
-&gt;&gt; setupAgenticToolkit(&quot;update&quot;)
-```
+    .logo-link img {
+      display: block;
+      height: 34px;
+      max-width: 190px;
+      object-fit: contain;
+      width: auto;
+    }
 
-3. Each session, initialize with the same `addpath` and `satk_initialize` commands as above.
+    .top-nav {
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: flex-end;
+      min-width: 0;
+    }
 
-## What&#x27;s New
+    .top-nav a {
+      align-items: center;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      border-radius: 6px;
+      color: #ffffff;
+      display: inline-flex;
+      font-size: 13px;
+      font-weight: 600;
+      justify-content: center;
+      max-width: 100%;
+      min-width: 0;
+      min-height: 36px;
+      padding: 7px 12px;
+      text-decoration: none;
+      white-space: nowrap;
+      word-break: break-word;
+    }
 
-- **`simulink-control-motors` skill** — New skill that guides agents through building Motor Control Blockset models, with proven architecture patterns and ready-made configurations for 16 motor drive topologies.
+    .top-nav a:hover {
+      background: rgba(255, 255, 255, 0.12);
+      color: #ffffff;
+    }
 
-## Improved Skills and Tools
+    .intro {
+      background: #ffffff;
+      border-bottom: 1px solid var(--mw-border-subtle);
+    }
 
-- **`checking-model-compliance` skill** — Now supports checking models against Simulink Code Inspector (SLCI) in addition to the existing compliance standards.
+    .intro-inner {
+      margin: 0 auto;
+      max-width: var(--page-max);
+      padding: 44px 28px 34px;
+      width: 100%;
+    }
 
-- **Clearer simulation error diagnostics** — When a simulation fails, `model_read_diagnostics` now reports the underlying cause of the error, including the specific block path and error details that were previously hidden behind a generic message.
+    .eyebrow {
+      color: var(--mw-color-accent);
+      font-size: 13px;
+      font-weight: 700;
+      margin: 0 0 10px;
+      text-transform: uppercase;
+    }
 
-## Bug Fixes
+    h1 {
+      color: var(--mw-color-primary);
+      font-size: 36px;
+      line-height: 1.18;
+      margin: 0;
+      overflow-wrap: anywhere;
+    }
 
-- **Small models could be misread as empty** — Agents no longer misinterpret small, simple models as empty when asked to explain them.
+    .tagline {
+      color: var(--mw-text-muted);
+      font-size: 16px;
+      margin: 12px 0 0;
+      max-width: 720px;
+    }
 
-- **Rewiring a masked Simscape Power Systems port could connect the wrong endpoint** — `model_edit` now connects to the intended physical port when rewiring masked Specialized Power Systems blocks. ([#63](https://github.com/matlab/simulink-agentic-toolkit/issues/63))
+    h1 .title-line,
+    .tagline span {
+      display: inline;
+    }
 
-- **A failed connect could silently delete an existing connection** — When connecting to an already-connected input port fails, `model_edit` now preserves the original connection instead of removing it. ([#62](https://github.com/matlab/simulink-agentic-toolkit/issues/62))
+    .build-badge {
+      background: var(--mw-background-note);
+      border: 1px solid rgba(215, 118, 0, 0.35);
+      border-left: 4px solid var(--mw-color-accent);
+      border-radius: var(--radius);
+      color: #555555;
+      display: inline-flex;
+      font-size: 13px;
+      font-weight: 700;
+      justify-content: center;
+      margin-top: 22px;
+      min-height: 34px;
+      padding: 6px 12px;
+    }
 
-- **`Trigonometric Function` added by name computed an approximated sine** — Adding a `Trigonometric Function` block by its Simulink Library Browser name now produces the exact sine instead of a CORDIC approximation, avoiding silent output differences. ([#61](https://github.com/matlab/simulink-agentic-toolkit/issues/61))
+    .release-grid {
+      display: grid;
+      gap: 14px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      margin-top: 24px;
+    }
 
-**Full Changelog**: https://github.com/matlab/simulink-agentic-toolkit/compare/2026.08.12...2026.08.19</pre>
+    .release-card {
+      background: #ffffff;
+      border: 1px solid var(--mw-border-subtle);
+      border-radius: var(--radius);
+      display: grid;
+      gap: 10px;
+      padding: 16px;
+    }
 
-<h3>matlab-agentic-toolkit (2026.08.13)</h3>
-<pre style="white-space:pre-wrap;background:#f4f4f4;padding:12px;border-radius:6px">## What&#x27;s New (2026.08.13)
+    .release-card-title {
+      color: var(--mw-color-primary);
+      font-size: 15px;
+      font-weight: 800;
+      line-height: 1.25;
+      margin: 0;
+      overflow-wrap: anywhere;
+    }
 
-### New Skills in Existing Skill Groups
+    .release-card-meta {
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
 
-- **Image Processing and Computer Vision** — `matlab-analyze-spectral-images` for reading, processing, analyzing, labeling, and classifying hyperspectral and multispectral images.
+    .release-pill {
+      background: var(--mw-background-muted);
+      border: 1px solid var(--mw-border-subtle);
+      border-radius: 999px;
+      color: var(--mw-color-gray);
+      display: inline-flex;
+      font-size: 12px;
+      font-weight: 700;
+      justify-content: center;
+      min-height: 28px;
+      padding: 4px 10px;
+    }
 
-### Improved Skills
+    .release-card-list {
+      display: grid;
+      gap: 7px;
+      margin: 0;
+      padding: 0;
+    }
 
-- `matlab-analyze-data` — Expanded `convertvars` documentation covering function-handle selectors and in-place transforms.
-- `matlab-build-industrial-hmi` — Added hand-off to `matlab-build-app` for App Designer serialization with `.mlapp` output, and a programmatic fallback when unavailable.
-- `matlab-deploy-ai-model` — Added LiteRT&amp;trade; codegen support (loadLiteRTModel) for both MATLAB&amp;reg; and Simulink&amp;reg; workflows.
-- `matlab-deploy-embedded-code` — Refined ARM&amp;reg; Cortex-A SIMD/CRL guidance and added reference for Simulink Coder properties.
-- `matlab-design-radar-waveform` — Added spread-spectrum and phase-coded waveform support (M-sequence, PN code, dual-function radar-communication waveforms) and spectral notching reference.
-- `matlab-generate-code` — Added host-target SIMD configuration (InstructionSetExtensions, SIMDAcceleration, OptimizeReductions) and OpenMP guidance for lib/dll/exe and MEX targets.
-- `matlab-install-products` — Enhanced Windows&amp;reg; agent support with stricter file-creation protocol for PowerShell-based workflows.
+    .release-card-list li {
+      align-items: center;
+      display: flex;
+      gap: 8px;
+      margin: 0;
+    }
 
-### Compatibility Considerations
+    .release-card-list li::before {
+      background: var(--mw-color-accent);
+      border-radius: 999px;
+      content: "";
+      flex: 0 0 7px;
+      height: 7px;
+    }
 
-- **22 skills renamed** for improved clarity and consistency with other skills in the toolkit. If you installed any of the previous skills, re-run the installer to switch to the new versions. See [Update MATLAB Agentic Toolkit](https://github.com/matlab/matlab-agentic-toolkit#update-matlab-agentic-toolkit). You must also update any manual references to the old skill names, for example, references in agent instructions.
+    .page-shell {
+      display: grid;
+      gap: 28px;
+      grid-template-columns: 248px minmax(0, 1fr);
+      margin: 0 auto;
+      max-width: var(--page-max);
+      padding: 28px;
+      width: 100%;
+    }
 
-  | Previously | Now |
-  |---|---|
-  | `matlab-debugging` | `matlab-debug-code` |
-  | `matlab-read-doc` | `matlab-read-documentation` |
-  | `matlab-testing` | `matlab-write-test` |
-  | `matlab-theming` | `matlab-apply-theme` |
-  | `matlab-choose-bigdata-solution` | `matlab-choose-big-data-solution` |
-  | `matlab-driving-data-importer` | `matlab-import-driving-data` |
-  | `matlab-ncap-testing` | `matlab-use-ncap-protocol` |
-  | `matlab-scenario-builder` | `matlab-use-scenario-builder` |
-  | `matlab-sharing` | `matlab-share-content` |
-  | `matlab-review-fi-code` | `matlab-review-fi-object-code` |
-  | `matlab-access-from-excel` | `matlab-use-spreadsheet-link` |
-  | `matlab-ocr` | `matlab-recognize-text` |
-  | `matlab-point-cloud-file-io` | `matlab-read-write-point-cloud-file` |
-  | `matlab-point-cloud-registration` | `matlab-register-point-clouds` |
-  | `matlab-setup-worker-state` | `matlab-set-up-worker-state` |
-  | `matlab-design-antennas` | `matlab-design-antenna` |
-  | `matlab-design-pcb-txline` | `matlab-design-pcb-transmission-line` |
-  | `matlab-integrate-antennas` | `matlab-integrate-antenna` |
-  | `matlab-analyze-time-frequency` | `matlab-analyze-time-frequency-content` |
-  | `matlab-dsphdl-ddc-design` | `matlab-design-dsphdl-ddc` |
-  | `matlab-connect-ble` | `matlab-connect-bluetooth-low-energy-device` |
-  | `matlab-vehicle-network-communication` | `matlab-use-vehicle-network` |
+    .side-nav {
+      align-self: start;
+      position: sticky;
+      top: 96px;
+    }
 
-- **3 consolidated skills** replace multiple previous skills. If you installed any of the individual skills, re-run the installer to switch to the consolidated versions.
+    .side-nav-box {
+      background: #ffffff;
+      border: 1px solid var(--mw-border-subtle);
+      border-radius: var(--radius);
+      box-shadow: var(--mw-shadow-soft);
+      max-width: 100%;
+      padding: 12px;
+    }
 
-  | Removed skills | Replaced by |
-  |---|---|
-  | `matlab-analyze-dependencies`, `matlab-assess-toolbox`, `matlab-build-toolbox`, `matlab-create-buildfile`, `matlab-create-project`, `matlab-define-toolbox-api`, `matlab-document-toolbox`, `matlab-exclude-files`, `matlab-publish-toolbox` | `matlab-package-toolbox` |
-  | `matlab-connect-databricks-jdbc`, `matlab-connect-databricks-spark` | `matlab-connect-databricks` |
-  | `matlab-map-database-objects`, `matlab-read-database`, `matlab-write-database` | `matlab-use-database` |
+    .side-nav-title {
+      color: var(--mw-text-muted);
+      font-size: 12px;
+      font-weight: 700;
+      margin: 4px 6px 10px;
+      text-transform: uppercase;
+    }
 
-----
+    .side-nav a {
+      align-items: center;
+      border-radius: 6px;
+      color: var(--mw-text-primary);
+      display: flex;
+      font-size: 14px;
+      font-weight: 700;
+      justify-content: center;
+      max-width: 100%;
+      min-width: 0;
+      min-height: 42px;
+      padding: 8px 10px;
+      text-align: center;
+      text-decoration: none;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
 
-Copyright 2026 The MathWorks, Inc.
+    .side-nav a + a {
+      margin-top: 4px;
+    }
 
-----</pre>
-</body></html>
+    .side-nav a:hover,
+    .side-nav a.is-active {
+      background: var(--mw-background-selected);
+      color: var(--mw-color-primary);
+    }
+
+    main {
+      min-width: 0;
+    }
+
+    .newsletter-section {
+      background: var(--mw-background-primary);
+      border: 1px solid var(--mw-border-subtle);
+      border-radius: var(--radius);
+      box-shadow: var(--mw-shadow-soft);
+      margin-bottom: 24px;
+      min-width: 0;
+      overflow: hidden;
+    }
+
+    .section-head {
+      border-bottom: 1px solid var(--mw-border-subtle);
+      padding: 22px 26px 18px;
+    }
+
+    .section-head-row {
+      align-items: flex-start;
+      display: flex;
+      gap: 14px;
+      justify-content: space-between;
+    }
+
+    h2 {
+      color: var(--mw-color-primary);
+      font-size: 22px;
+      line-height: 1.25;
+      margin: 0;
+      overflow-wrap: anywhere;
+    }
+
+    .section-kicker {
+      color: var(--mw-text-muted);
+      font-size: 12px;
+      font-weight: 700;
+      margin: 0 0 6px;
+      text-transform: uppercase;
+    }
+
+    .version {
+      background: var(--mw-background-muted);
+      border: 1px solid var(--mw-border-subtle);
+      border-radius: 6px;
+      color: var(--mw-color-gray);
+      display: inline-flex;
+      font-size: 13px;
+      font-weight: 700;
+      justify-content: center;
+      margin-left: 8px;
+      min-height: 26px;
+      padding: 2px 8px;
+      vertical-align: middle;
+    }
+
+    .section-counts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+
+    .count-chip {
+      background: rgba(18, 86, 135, 0.08);
+      border: 1px solid rgba(18, 86, 135, 0.20);
+      border-radius: 999px;
+      color: var(--mw-color-primary);
+      display: inline-flex;
+      font-size: 12px;
+      font-weight: 800;
+      justify-content: center;
+      min-height: 30px;
+      padding: 5px 10px;
+      white-space: nowrap;
+    }
+
+    .section-body {
+      padding: 22px 26px 26px;
+    }
+
+    h3 {
+      color: var(--mw-text-primary);
+      font-size: 16px;
+      margin: 20px 0 6px;
+      overflow-wrap: anywhere;
+    }
+
+    h3:first-child {
+      margin-top: 0;
+    }
+
+    .content-stack {
+      display: grid;
+      gap: 18px;
+    }
+
+    .info-panel {
+      background: #ffffff;
+      border: 1px solid var(--mw-border-subtle);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .info-panel.is-accent {
+      border-left: 4px solid var(--mw-color-accent);
+    }
+
+    .info-panel-head {
+      align-items: center;
+      background: var(--mw-background-muted);
+      border-bottom: 1px solid var(--mw-border-subtle);
+      display: flex;
+      gap: 12px;
+      justify-content: space-between;
+      padding: 12px 16px;
+    }
+
+    .info-panel-title {
+      color: var(--mw-text-primary);
+      font-size: 16px;
+      font-weight: 800;
+      line-height: 1.3;
+      margin: 0;
+    }
+
+    .info-panel-body {
+      padding: 16px;
+    }
+
+    .item-grid {
+      display: grid;
+      gap: 12px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .item-grid.one-column {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .info-card {
+      background: #ffffff;
+      border: 1px solid var(--mw-border-subtle);
+      border-radius: var(--radius);
+      display: grid;
+      gap: 8px;
+      padding: 14px;
+    }
+
+    .info-card.emphasis {
+      background: rgba(18, 86, 135, 0.05);
+      border-color: rgba(18, 86, 135, 0.22);
+    }
+
+    .info-card.warning {
+      background: var(--mw-background-note);
+      border-color: rgba(215, 118, 0, 0.35);
+    }
+
+    .info-card-title {
+      color: var(--mw-color-primary);
+      font-size: 15px;
+      font-weight: 800;
+      line-height: 1.4;
+      margin: 0;
+    }
+
+    .info-card-text {
+      color: var(--mw-text-primary);
+      margin: 0;
+    }
+
+    .detail-list {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .detail-list li {
+      background: #ffffff;
+      border: 1px solid var(--mw-border-subtle);
+      border-radius: var(--radius);
+      list-style: none;
+      margin: 0;
+      padding: 12px 14px;
+    }
+
+    .issue-grid {
+      display: grid;
+      gap: 12px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .issue-card {
+      background: #ffffff;
+      border: 1px solid var(--mw-border-subtle);
+      border-radius: var(--radius);
+      display: grid;
+      gap: 8px;
+      padding: 14px;
+    }
+
+    .issue-title {
+      color: var(--mw-color-primary);
+      font-weight: 800;
+      line-height: 1.4;
+      margin: 0;
+    }
+
+    .issue-copy {
+      margin: 0;
+    }
+
+    .summary-table {
+      border-collapse: collapse;
+      min-width: 0;
+      width: 100%;
+    }
+
+    .summary-table th {
+      width: 34%;
+    }
+
+    .table-title {
+      align-items: center;
+      background: var(--mw-background-muted);
+      border-bottom: 1px solid var(--mw-border-subtle);
+      display: flex;
+      gap: 10px;
+      justify-content: space-between;
+      padding: 12px 14px;
+    }
+
+    .table-title strong {
+      color: var(--mw-color-primary);
+    }
+
+    ul {
+      margin: 8px 0 0;
+      padding-left: 22px;
+    }
+
+    li {
+      margin-bottom: 8px;
+      overflow-wrap: anywhere;
+    }
+
+    p {
+      margin: 12px 0 0;
+      overflow-wrap: anywhere;
+    }
+
+    .note {
+      background: var(--mw-background-note);
+      border: 1px solid rgba(215, 118, 0, 0.35);
+      border-left: 4px solid var(--mw-color-accent);
+      border-radius: var(--radius);
+      margin: 10px 0 16px;
+      padding: 12px 14px;
+    }
+
+    .link-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .button-link {
+      align-items: center;
+      background: var(--mw-color-primary);
+      border: 1px solid var(--mw-color-primary);
+      border-radius: 6px;
+      color: #ffffff;
+      display: inline-flex;
+      font-size: 14px;
+      font-weight: 700;
+      justify-content: center;
+      min-height: 40px;
+      padding: 8px 14px;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .button-link:hover {
+      background: var(--mw-color-primary-dark);
+      color: #ffffff;
+    }
+
+    .text-muted {
+      color: var(--mw-text-muted);
+      font-size: 13px;
+    }
+
+    .table-wrap {
+      border: 1px solid var(--mw-border-subtle);
+      border-radius: var(--radius);
+      margin: 14px 0 20px;
+      overflow-x: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      min-width: 640px;
+      width: 100%;
+    }
+
+    th,
+    td {
+      border-bottom: 1px solid var(--mw-border-subtle);
+      padding: 10px 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: var(--mw-background-muted);
+      color: var(--mw-color-primary);
+      font-size: 14px;
+      position: sticky;
+      top: 0;
+    }
+
+    td {
+      font-size: 14px;
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .site-footer {
+      color: var(--mw-text-muted);
+      font-size: 12px;
+      margin: 0 auto;
+      max-width: var(--page-max);
+      padding: 4px 28px 42px;
+      text-align: center;
+    }
+
+    @media (max-width: 900px) {
+      .header-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .top-nav {
+        justify-content: flex-start;
+      }
+
+      .release-grid,
+      .item-grid,
+      .issue-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .section-head-row {
+        display: grid;
+      }
+
+      .section-counts {
+        justify-content: flex-start;
+      }
+
+      .page-shell {
+        grid-template-columns: minmax(0, 1fr);
+        max-width: 100%;
+      }
+
+      .side-nav {
+        position: static;
+      }
+
+      .side-nav-box {
+        box-shadow: none;
+      }
+
+      .side-nav a {
+        min-height: 38px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .header-inner,
+      .intro-inner,
+      .page-shell {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      .logo-link {
+        min-width: 148px;
+      }
+
+      .top-nav {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+      }
+
+      .top-nav a {
+        max-width: calc(100vw - 36px);
+        min-width: 0;
+        overflow-wrap: anywhere;
+        white-space: normal;
+      }
+
+      h1 {
+        font-size: 26px;
+        max-width: calc(100vw - 36px);
+      }
+
+      h1 .title-line,
+      .tagline span {
+        display: block;
+      }
+
+      .tagline {
+        font-size: 15px;
+        width: calc(100vw - 36px);
+      }
+
+      .tagline,
+      .build-badge,
+      .side-nav-box,
+      .newsletter-section {
+        max-width: calc(100vw - 36px);
+      }
+
+      .section-head,
+      .section-body {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      .version {
+        margin-left: 0;
+        margin-top: 8px;
+      }
+
+      .info-panel-head,
+      .table-title {
+        align-items: flex-start;
+        display: grid;
+      }
+
+      .button-link {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">본문으로 이동</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo-link" href="https://www.mathworks.com/" target="_blank" rel="noopener noreferrer" aria-label="MathWorks">
+        <img src="data:image/png;base64,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" alt="MathWorks">
+      </a>
+      <nav class="top-nav" aria-label="주요 섹션">
+        <a href="#matlab-mcp-server">matlab-mcp-server</a>
+        <a href="#simulink-agentic-toolkit">simulink-agentic-toolkit</a>
+        <a href="#matlab-agentic-toolkit">matlab-agentic-toolkit</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="intro" aria-labelledby="page-title">
+    <div class="intro-inner">
+      <p class="eyebrow">BUILD 2026-08-20</p>
+      <h1 id="page-title"><span class="title-line">Agentic Engineering</span> <span class="title-line">Newsletter</span></h1>
+      <p class="tagline"><span>MATLAB &amp; Simulink Agentic Toolkit이</span> <span>전하는 최신 소식</span></p>
+      <div class="build-badge">BUILD 2026-08-20</div>
+      <div class="release-grid" aria-label="릴리스 요약">
+        <article class="release-card">
+          <p class="release-card-title">matlab-mcp-server</p>
+          <div class="release-card-meta">
+            <span class="release-pill">v0.12.0</span>
+          </div>
+          <ul class="release-card-list">
+            <li>새로운 기능 1</li>
+          </ul>
+        </article>
+        <article class="release-card">
+          <p class="release-card-title">simulink-agentic-toolkit</p>
+          <div class="release-card-meta">
+            <span class="release-pill">2026.08.19</span>
+          </div>
+          <ul class="release-card-list">
+            <li>새로운 기능 1</li>
+            <li>스킬 및 도구 개선 2</li>
+            <li>버그 수정 4</li>
+          </ul>
+        </article>
+        <article class="release-card">
+          <p class="release-card-title">matlab-agentic-toolkit</p>
+          <div class="release-card-meta">
+            <span class="release-pill">2026.08.13</span>
+          </div>
+          <ul class="release-card-list">
+            <li>신규 스킬 1</li>
+            <li>개선된 스킬 7</li>
+            <li>스킬 이름 변경 22</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="page-shell">
+    <aside class="side-nav" aria-label="섹션 메뉴">
+      <div class="side-nav-box">
+        <div class="side-nav-title">Newsletter</div>
+        <a href="#matlab-mcp-server" class="is-active">matlab-mcp-server</a>
+        <a href="#simulink-agentic-toolkit">simulink-agentic-toolkit</a>
+        <a href="#matlab-agentic-toolkit">matlab-agentic-toolkit</a>
+      </div>
+    </aside>
+
+    <main id="main-content">
+      <section class="newsletter-section" id="matlab-mcp-server" aria-labelledby="mcp-title">
+        <div class="section-head">
+          <div class="section-head-row">
+            <div>
+              <p class="section-kicker">New Feature</p>
+              <h2 id="mcp-title">matlab-mcp-server <span class="version">v0.12.0</span></h2>
+            </div>
+            <div class="section-counts" aria-label="matlab-mcp-server 요약">
+              <span class="count-chip">새로운 기능 1</span>
+            </div>
+          </div>
+        </div>
+        <div class="section-body">
+          <div class="content-stack">
+            <article class="info-panel is-accent">
+              <div class="info-panel-head">
+                <h3 class="info-panel-title">새로운 기능</h3>
+                <span class="count-chip">1건</span>
+              </div>
+              <div class="info-panel-body">
+                <div class="info-card emphasis">
+                  <p class="info-card-title">MATLAB MCP Server 연결 시 안내 메시지 표시</p>
+                  <p class="info-card-text">에이전트가 MATLAB MCP Server를 통해 접속하면 MATLAB 커맨드 윈도우에 연결되었음을 알리는 메시지가 표시됩니다. 에이전트가 실제로 MATLAB 세션에 연결된 시점을 사용자가 바로 확인할 수 있습니다.</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="newsletter-section" id="simulink-agentic-toolkit" aria-labelledby="simulink-title">
+        <div class="section-head">
+          <div class="section-head-row">
+            <div>
+              <p class="section-kicker">Simulink Agentic Toolkit</p>
+              <h2 id="simulink-title">simulink-agentic-toolkit <span class="version">2026.08.19</span></h2>
+            </div>
+            <div class="section-counts" aria-label="simulink-agentic-toolkit 요약">
+              <span class="count-chip">새로운 기능 1</span>
+              <span class="count-chip">개선 2</span>
+              <span class="count-chip">버그 수정 4</span>
+            </div>
+          </div>
+        </div>
+        <div class="section-body">
+          <div class="content-stack">
+            <article class="info-panel is-accent">
+              <div class="info-panel-head">
+                <h3 class="info-panel-title">새로운 기능</h3>
+                <span class="count-chip">1건</span>
+              </div>
+              <div class="info-panel-body">
+                <div class="info-card emphasis">
+                  <p class="info-card-title"><code>simulink-control-motors</code> 스킬 추가</p>
+                  <p class="info-card-text">Motor Control Blockset 모델 구축을 안내하는 신규 스킬로, 검증된 아키텍처 패턴과 16가지 모터 구동 토폴로지에 대한 사전 구성 예시를 제공합니다.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="info-panel">
+              <div class="info-panel-head">
+                <h3 class="info-panel-title">스킬 및 도구 개선</h3>
+                <span class="count-chip">2건</span>
+              </div>
+              <div class="info-panel-body">
+                <div class="item-grid">
+                  <article class="info-card">
+                    <p class="info-card-title"><code>checking-model-compliance</code> 스킬 확장</p>
+                    <p class="info-card-text">기존 컴플라이언스 표준 검사에 더해 Simulink Code Inspector(SLCI) 기준 검사를 지원하게 되었습니다.</p>
+                  </article>
+                  <article class="info-card">
+                    <p class="info-card-title">시뮬레이션 오류 진단 개선</p>
+                    <p class="info-card-text">시뮬레이션 실패 시 <code>model_read_diagnostics</code>가 이전에는 일반적인 메시지 뒤에 가려져 있던 근본 원인, 즉 구체적인 블록 경로와 오류 상세 정보를 함께 보고합니다.</p>
+                  </article>
+                </div>
+              </div>
+            </article>
+
+            <article class="info-panel">
+              <div class="info-panel-head">
+                <h3 class="info-panel-title">버그 수정</h3>
+                <span class="count-chip">4건</span>
+              </div>
+              <div class="info-panel-body">
+                <div class="issue-grid">
+                  <article class="issue-card">
+                    <p class="issue-title">작고 단순한 모델을 빈 모델로 오인식하는 문제</p>
+                    <p class="issue-copy">작고 단순한 모델의 설명을 요청했을 때, 에이전트가 더 이상 이를 빈 모델로 잘못 인식하지 않습니다.</p>
+                  </article>
+                  <article class="issue-card">
+                    <p class="issue-title">마스킹된 Simscape Power Systems 포트 재연결 오류</p>
+                    <p class="issue-copy">마스킹된 Specialized Power Systems 블록의 포트를 다시 연결할 때, <code>model_edit</code>이 이제 의도한 물리 포트에 정확히 연결합니다. (Issue #63)</p>
+                  </article>
+                  <article class="issue-card">
+                    <p class="issue-title">연결 실패 시 기존 연결이 삭제되는 문제</p>
+                    <p class="issue-copy">이미 연결된 입력 포트에 대한 연결 시도가 실패할 때, <code>model_edit</code>이 이제 기존 연결을 삭제하지 않고 그대로 보존합니다. (Issue #62)</p>
+                  </article>
+                  <article class="issue-card">
+                    <p class="issue-title"><code>Trigonometric Function</code> 블록의 근사 계산 문제</p>
+                    <p class="issue-copy">Simulink Library Browser 명칭으로 <code>Trigonometric Function</code> 블록을 추가하면, CORDIC 근사값 대신 정확한 사인 값을 계산하도록 수정하여 결과값 차이를 방지합니다. (Issue #61)</p>
+                  </article>
+                </div>
+              </div>
+            </article>
+
+            <article class="info-panel">
+              <div class="table-title">
+                <strong>참고 링크</strong>
+                <div class="link-row">
+                  <a class="button-link" href="https://github.com/matlab/simulink-agentic-toolkit/compare/2026.08.12...2026.08.19" target="_blank" rel="noopener noreferrer">2026.08.12...2026.08.19 비교 보기</a>
+                  <a class="button-link" href="https://github.com/matlab/simulink-agentic-toolkit" target="_blank" rel="noopener noreferrer">저장소 바로가기</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="newsletter-section" id="matlab-agentic-toolkit" aria-labelledby="matlab-title">
+        <div class="section-head">
+          <div class="section-head-row">
+            <div>
+              <p class="section-kicker">MATLAB Agentic Toolkit</p>
+              <h2 id="matlab-title">matlab-agentic-toolkit <span class="version">2026.08.13</span></h2>
+            </div>
+            <div class="section-counts" aria-label="matlab-agentic-toolkit 요약">
+              <span class="count-chip">신규 스킬 1</span>
+              <span class="count-chip">개선 7</span>
+              <span class="count-chip">이름 변경 22</span>
+              <span class="count-chip">통합 3</span>
+            </div>
+          </div>
+        </div>
+        <div class="section-body">
+          <div class="content-stack">
+            <article class="info-panel is-accent">
+              <div class="info-panel-head">
+                <h3 class="info-panel-title">기존 스킬 그룹 내 신규 스킬</h3>
+                <span class="count-chip">1건</span>
+              </div>
+              <div class="info-panel-body">
+                <div class="info-card emphasis">
+                  <p class="info-card-title">이미지 처리 및 컴퓨터 비전</p>
+                  <p class="info-card-text">초분광(hyperspectral) 및 다중분광(multispectral) 이미지를 읽고, 처리하고, 분석하고, 라벨링하고, 분류하기 위한 <code>matlab-analyze-spectral-images</code> 스킬이 추가되었습니다.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="info-panel">
+              <div class="info-panel-head">
+                <h3 class="info-panel-title">개선된 스킬</h3>
+                <span class="count-chip">7건</span>
+              </div>
+              <div class="info-panel-body">
+                <div class="item-grid">
+                  <article class="info-card">
+                    <p class="info-card-title"><code>matlab-analyze-data</code></p>
+                    <p class="info-card-text">함수 핸들 선택자(function-handle selector) 및 in-place 변환을 다루는 <code>convertvars</code> 문서가 확장되었습니다.</p>
+                  </article>
+                  <article class="info-card">
+                    <p class="info-card-title"><code>matlab-build-industrial-hmi</code></p>
+                    <p class="info-card-text"><code>.mlapp</code> 출력을 위한 App Designer 직렬화 시 <code>matlab-build-app</code>으로의 핸드오프가 추가되었고, 사용할 수 없는 경우를 위한 프로그래밍 방식 대체 경로도 추가되었습니다.</p>
+                  </article>
+                  <article class="info-card">
+                    <p class="info-card-title"><code>matlab-deploy-ai-model</code></p>
+                    <p class="info-card-text">MATLAB 및 Simulink 워크플로 모두에서 LiteRT&trade; 코드 생성 지원(<code>loadLiteRTModel</code>)이 추가되었습니다.</p>
+                  </article>
+                  <article class="info-card">
+                    <p class="info-card-title"><code>matlab-deploy-embedded-code</code></p>
+                    <p class="info-card-text">ARM&reg; Cortex-A SIMD/CRL 가이드가 개선되었고, Simulink Coder 속성에 대한 참조가 추가되었습니다.</p>
+                  </article>
+                  <article class="info-card">
+                    <p class="info-card-title"><code>matlab-design-radar-waveform</code></p>
+                    <p class="info-card-text">스프레드 스펙트럼 및 위상 코딩 파형(M-sequence, PN 코드, 듀얼 기능 레이더-통신 파형) 지원과 스펙트럼 노칭(notching) 참조가 추가되었습니다.</p>
+                  </article>
+                  <article class="info-card">
+                    <p class="info-card-title"><code>matlab-generate-code</code></p>
+                    <p class="info-card-text">호스트-타깃 SIMD 구성(InstructionSetExtensions, SIMDAcceleration, OptimizeReductions)과 lib/dll/exe 및 MEX 타깃을 위한 OpenMP 가이드가 추가되었습니다.</p>
+                  </article>
+                  <article class="info-card">
+                    <p class="info-card-title"><code>matlab-install-products</code></p>
+                    <p class="info-card-text">PowerShell 기반 워크플로에 대한 엄격한 파일 생성 프로토콜을 적용하여 Windows&reg; 에이전트 지원이 강화되었습니다.</p>
+                  </article>
+                </div>
+              </div>
+            </article>
+
+            <article class="info-panel is-accent">
+              <div class="info-panel-head">
+                <h3 class="info-panel-title">호환성 관련 유의사항</h3>
+                <span class="count-chip">스킬 이름 변경 22</span>
+              </div>
+              <div class="info-panel-body">
+                <div class="info-card warning">
+                  <p class="info-card-title">스킬 22개 이름 변경</p>
+                  <p class="info-card-text">툴킷 내 다른 스킬과의 명확성 및 일관성을 위해 22개 스킬의 이름이 변경되었습니다. 이전 버전의 스킬을 설치한 경우, 설치 프로그램을 다시 실행하여 새 버전으로 전환해야 합니다. 에이전트 지침 등에서 이전 스킬 이름을 참조하고 있다면 함께 갱신해야 합니다.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="info-panel">
+              <div class="table-title">
+                <strong>스킬 이름 변경</strong>
+                <span class="count-chip">22개</span>
+              </div>
+              <div class="table-wrap" role="region" aria-label="스킬 이름 변경 표" tabindex="0">
+                <table>
+                  <thead>
+                    <tr>
+                      <th scope="col">이전 이름</th>
+                      <th scope="col">변경된 이름</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td><code>matlab-debugging</code></td><td><code>matlab-debug-code</code></td></tr>
+                    <tr><td><code>matlab-read-doc</code></td><td><code>matlab-read-documentation</code></td></tr>
+                    <tr><td><code>matlab-testing</code></td><td><code>matlab-write-test</code></td></tr>
+                    <tr><td><code>matlab-theming</code></td><td><code>matlab-apply-theme</code></td></tr>
+                    <tr><td><code>matlab-choose-bigdata-solution</code></td><td><code>matlab-choose-big-data-solution</code></td></tr>
+                    <tr><td><code>matlab-driving-data-importer</code></td><td><code>matlab-import-driving-data</code></td></tr>
+                    <tr><td><code>matlab-ncap-testing</code></td><td><code>matlab-use-ncap-protocol</code></td></tr>
+                    <tr><td><code>matlab-scenario-builder</code></td><td><code>matlab-use-scenario-builder</code></td></tr>
+                    <tr><td><code>matlab-sharing</code></td><td><code>matlab-share-content</code></td></tr>
+                    <tr><td><code>matlab-review-fi-code</code></td><td><code>matlab-review-fi-object-code</code></td></tr>
+                    <tr><td><code>matlab-access-from-excel</code></td><td><code>matlab-use-spreadsheet-link</code></td></tr>
+                    <tr><td><code>matlab-ocr</code></td><td><code>matlab-recognize-text</code></td></tr>
+                    <tr><td><code>matlab-point-cloud-file-io</code></td><td><code>matlab-read-write-point-cloud-file</code></td></tr>
+                    <tr><td><code>matlab-point-cloud-registration</code></td><td><code>matlab-register-point-clouds</code></td></tr>
+                    <tr><td><code>matlab-setup-worker-state</code></td><td><code>matlab-set-up-worker-state</code></td></tr>
+                    <tr><td><code>matlab-design-antennas</code></td><td><code>matlab-design-antenna</code></td></tr>
+                    <tr><td><code>matlab-design-pcb-txline</code></td><td><code>matlab-design-pcb-transmission-line</code></td></tr>
+                    <tr><td><code>matlab-integrate-antennas</code></td><td><code>matlab-integrate-antenna</code></td></tr>
+                    <tr><td><code>matlab-analyze-time-frequency</code></td><td><code>matlab-analyze-time-frequency-content</code></td></tr>
+                    <tr><td><code>matlab-dsphdl-ddc-design</code></td><td><code>matlab-design-dsphdl-ddc</code></td></tr>
+                    <tr><td><code>matlab-connect-ble</code></td><td><code>matlab-connect-bluetooth-low-energy-device</code></td></tr>
+                    <tr><td><code>matlab-vehicle-network-communication</code></td><td><code>matlab-use-vehicle-network</code></td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+
+            <article class="info-panel">
+              <div class="table-title">
+                <strong>스킬 3개 통합</strong>
+                <span class="count-chip">3개 그룹</span>
+              </div>
+              <div class="info-panel-body">
+                <div class="info-card warning">
+                  <p class="info-card-text">여러 개의 기존 스킬이 통합 스킬로 대체되었습니다. 개별 스킬을 설치한 경우, 설치 프로그램을 다시 실행하여 통합 버전으로 전환해야 합니다.</p>
+                </div>
+              </div>
+              <div class="table-wrap" role="region" aria-label="통합 스킬 표" tabindex="0">
+                <table>
+                  <thead>
+                    <tr>
+                      <th scope="col">제거된 스킬</th>
+                      <th scope="col">대체 스킬</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td><code>matlab-analyze-dependencies</code>, <code>matlab-assess-toolbox</code>, <code>matlab-build-toolbox</code>, <code>matlab-create-buildfile</code>, <code>matlab-create-project</code>, <code>matlab-define-toolbox-api</code>, <code>matlab-document-toolbox</code>, <code>matlab-exclude-files</code>, <code>matlab-publish-toolbox</code></td><td><code>matlab-package-toolbox</code></td></tr>
+                    <tr><td><code>matlab-connect-databricks-jdbc</code>, <code>matlab-connect-databricks-spark</code></td><td><code>matlab-connect-databricks</code></td></tr>
+                    <tr><td><code>matlab-map-database-objects</code>, <code>matlab-read-database</code>, <code>matlab-write-database</code></td><td><code>matlab-use-database</code></td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="site-footer">Agentic Engineering Newsletter &middot; Build 2026-08-20</footer>
+
+  <script>
+    const sectionLinks = Array.from(document.querySelectorAll('.side-nav a'));
+    const sections = sectionLinks
+      .map((link) => document.querySelector(link.getAttribute('href')))
+      .filter(Boolean);
+
+    if ('IntersectionObserver' in window && sections.length) {
+      const observer = new IntersectionObserver((entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+        if (!visible) return;
+
+        sectionLinks.forEach((link) => {
+          link.classList.toggle('is-active', link.getAttribute('href') === `#${visible.target.id}`);
+        });
+      }, {
+        rootMargin: '-120px 0px -55% 0px',
+        threshold: [0.2, 0.45, 0.7]
+      });
+
+      sections.forEach((section) => observer.observe(section));
+    }
+  </script>
+</body>
+</html>
