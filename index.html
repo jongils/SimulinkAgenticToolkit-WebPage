@@ -845,6 +845,7 @@
             <li>신규 스킬 3</li>
             <li>개선된 스킬 10</li>
             <li>스킬 이름 변경 4</li>
+            <li>스킬 제거 1</li>
           </ul>
         </article>
       </div>
@@ -866,7 +867,7 @@
         <div class="section-head">
           <div class="section-head-row">
             <div>
-              <p class="section-kicker">MATLAB MCP Server</p>
+              <p class="section-kicker">New Feature</p>
               <h2 id="mcp-title">matlab-mcp-server <span class="version">v0.12.0</span></h2>
             </div>
             <div class="section-counts" aria-label="matlab-mcp-server 요약">
@@ -883,8 +884,8 @@
               </div>
               <div class="info-panel-body">
                 <div class="info-card emphasis">
-                  <p class="info-card-title">MCP 서버 연결 시 MATLAB에 알림 메시지 표시</p>
-                  <p class="info-card-text">에이전트가 MATLAB MCP Server를 통해 연결되면 MATLAB 명령 창에 연결을 알리는 메시지가 표시됩니다. 사용자가 에이전트의 연결 여부를 즉시 확인할 수 있습니다.</p>
+                  <p class="info-card-title">에이전트 연결 알림 메시지 추가</p>
+                  <p class="info-card-text">MATLAB MCP Server를 통해 에이전트가 연결되면 MATLAB 커맨드 윈도우에 알림 메시지가 표시됩니다. 사용자가 에이전트가 언제 MATLAB 세션에 연결되었는지 별도 확인 없이 바로 알 수 있습니다.</p>
                 </div>
               </div>
             </article>
@@ -915,29 +916,29 @@
               </div>
               <div class="info-panel-body">
                 <div class="item-grid">
-                  <article class="info-card">
+                  <article class="info-card emphasis">
                     <p class="info-card-title"><code>simulink-explain-missing-coverage</code> 스킬 추가</p>
-                    <p class="info-card-text">이미 확보한 Simulink Coverage 결과에서 커버리지 목표가 왜 누락되었는지 설명하는 신규 스킬입니다. 도달 불가능한(죽은) 로직과 도달은 가능하지만 테스트되지 않은 결과를 구분하고, 테스트 추가·필터 적용·설계 수정 중 적절한 조치를 추천합니다.</p>
+                    <p class="info-card-text">이미 확보한 Simulink Coverage 결과에서 특정 커버리지 목표가 누락된 이유를 설명하는 신규 스킬입니다. 도달 불가능한(죽은) 로직과 도달 가능하지만 테스트되지 않은 결과를 구분하고, 테스트·필터·설계 수정 중 적절한 대응을 추천합니다.</p>
                   </article>
-                  <article class="info-card">
+                  <article class="info-card emphasis">
                     <p class="info-card-title"><code>simulink-generate-embedded-code</code> 스킬 추가</p>
-                    <p class="info-card-text">Simulink 모델과 참조 모델 전체에 대해 Embedded Coder 프로덕션 코드 생성을 위한 설정을 구성하는 신규 스킬로, 타깃·하드웨어·최적화·MISRA 준수 설정을 모델 계층 구조 전반에 일괄 적용합니다.</p>
+                    <p class="info-card-text">Simulink 모델과 참조 모델들을 Embedded Coder 프로덕션 코드 생성을 위해 구성하는 신규 스킬로, 타깃·하드웨어·최적화·MISRA 준수 설정을 모델 계층 전체에 적용합니다.</p>
                   </article>
-                  <article class="info-card">
+                  <article class="info-card emphasis">
                     <p class="info-card-title"><code>simulink-customize-a2l</code> 스킬 추가</p>
-                    <p class="info-card-text">Embedded Coder로 Simulink 모델에서 생성한 A2L(ASAP2) 캘리브레이션 파일을 커스터마이즈하는 신규 스킬입니다.</p>
+                    <p class="info-card-text">Embedded Coder로 Simulink 모델에서 생성된 A2L(ASAP2) 캘리브레이션 파일을 사용자 정의하는 신규 스킬입니다.</p>
                   </article>
-                  <article class="info-card">
+                  <article class="info-card emphasis">
                     <p class="info-card-title"><code>simulink-streaming-dsp</code> 스킬 추가</p>
-                    <p class="info-card-text">프레임 기반 스트리밍 DSP 모델을 구축하는 에이전트를 위한 신규 스킬로, 올바른 블록 선택과 프레임 구성 방법을 안내합니다.</p>
+                    <p class="info-card-text">프레임 기반 스트리밍 DSP 모델을 구축하는 에이전트를 위한 신규 스킬로, 적절한 블록 선택과 프레임 구성을 안내합니다.</p>
                   </article>
-                  <article class="info-card">
+                  <article class="info-card emphasis">
                     <p class="info-card-title"><code>finding-simulink-examples</code> 스킬 추가</p>
-                    <p class="info-card-text">MathWorks가 제공하는 예제 모델 카탈로그를 검색해, 일치하는 예제를 바로 열 수 있는 실행 명령을 반환하는 신규 스킬입니다.</p>
+                    <p class="info-card-text">MathWorks가 제공하는 예제 모델 카탈로그를 검색하여 일치하는 예제를 바로 열 수 있는 명령을 반환하는 신규 스킬입니다.</p>
                   </article>
-                  <article class="info-card">
-                    <p class="info-card-title">사전 구축된 툴박스 블록 지원</p>
-                    <p class="info-card-text">설치된 MathWorks 툴박스(Aerospace Blockset, Simscape 등)를 활성화해, 에이전트가 런타임에 라이브러리를 스캔하지 않고도 필요할 때 바로 해당 블록으로 모델을 구성할 수 있습니다.</p>
+                  <article class="info-card emphasis">
+                    <p class="info-card-title">사전 빌드된 툴박스 블록 지원</p>
+                    <p class="info-card-text">설치된 MathWorks 툴박스(Aerospace Blockset, Simscape 등)를 활성화하여, 런타임에 라이브러리를 스캔하지 않고도 에이전트가 필요할 때 해당 툴박스의 블록으로 모델을 구성할 수 있습니다.</p>
                   </article>
                 </div>
               </div>
@@ -946,17 +947,13 @@
             <article class="info-panel">
               <div class="info-panel-head">
                 <h3 class="info-panel-title">스킬 및 도구 개선</h3>
-                <span class="count-chip">2건</span>
+                <span class="count-chip">1건</span>
               </div>
               <div class="info-panel-body">
-                <div class="item-grid">
+                <div class="item-grid one-column">
                   <article class="info-card">
-                    <p class="info-card-title"><code>simulating-simulink-models</code> 스킬 정교화</p>
-                    <p class="info-card-text">파라미터 오버라이드, 배치 실행, 사용자 지정 입력 등 구체적인 시뮬레이션 설정을 요청할 때만 활성화되도록 개선되어, 다른 스킬이 처리해야 할 일반적인 모델링 요청에서는 더 이상 불필요하게 트리거되지 않습니다.</p>
-                  </article>
-                  <article class="info-card">
-                    <p class="info-card-title"><code>author-modeladvisor-checks</code> 스킬 확장</p>
-                    <p class="info-card-text">포맷 템플릿 검사(format-template checks), 구성 파라미터 검사(configuration-parameter checks), 컴파일 후 컨텍스트 검사(post-compile context checks) 등 더 많은 Model Advisor 검사 유형 작성을 지원하며, 레거시 검사를 최신 상세 스타일로 변환하는 기능도 추가되었습니다.</p>
+                    <p class="info-card-title"><code>simulink-curating-library-kg</code> 스킬 이름 변경 및 개선</p>
+                    <p class="info-card-text">기존 <code>curating-library-kg</code>에서 이름이 변경되었으며, 가드레일이 명확해지고 사용자 정의 라이브러리에 대한 블록 선택 안내가 개선되었습니다. 프롬프트, 스크립트, 에이전트 설정 등에서 이 스킬을 이름으로 참조하고 있었다면 새 이름으로 갱신해야 합니다.</p>
                   </article>
                 </div>
               </div>
@@ -1169,7 +1166,7 @@
     </main>
   </div>
 
-  <footer class="site-footer">Agentic Engineering Newsletter &middot; Build 2026-08-14</footer>
+  <footer class="site-footer">Agentic Engineering Newsletter &middot; Build 2026-08-27</footer>
 
   <script>
     const sectionLinks = Array.from(document.querySelectorAll('.side-nav a'));
