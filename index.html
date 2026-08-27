@@ -811,29 +811,29 @@
 
   <section class="intro" aria-labelledby="page-title">
     <div class="intro-inner">
-      <p class="eyebrow">BUILD 2026-08-26</p>
+      <p class="eyebrow">BUILD 2026-08-14</p>
       <h1 id="page-title"><span class="title-line">Agentic Engineering</span> <span class="title-line">Newsletter</span></h1>
       <p class="tagline"><span>MATLAB &amp; Simulink Agentic Toolkit이</span> <span>전하는 최신 소식</span></p>
-      <div class="build-badge">BUILD 2026-08-26</div>
+      <div class="build-badge">BUILD 2026-08-14</div>
       <div class="release-grid" aria-label="릴리스 요약">
         <article class="release-card">
           <p class="release-card-title">matlab-mcp-server</p>
           <div class="release-card-meta">
-            <span class="release-pill">v0.12.0</span>
+            <span class="release-pill">v0.11.4</span>
           </div>
           <ul class="release-card-list">
-            <li>새로운 기능 1</li>
+            <li>해결된 이슈 1</li>
           </ul>
         </article>
         <article class="release-card">
           <p class="release-card-title">simulink-agentic-toolkit</p>
           <div class="release-card-meta">
-            <span class="release-pill">2026.08.26</span>
+            <span class="release-pill">2026.08.12</span>
           </div>
           <ul class="release-card-list">
-            <li>새로운 기능 6</li>
-            <li>스킬 및 도구 개선 1</li>
-            <li>버그 수정 3</li>
+            <li>새로운 기능 1</li>
+            <li>스킬 및 도구 개선 2</li>
+            <li>버그 수정 7</li>
           </ul>
         </article>
         <article class="release-card">
@@ -866,11 +866,11 @@
         <div class="section-head">
           <div class="section-head-row">
             <div>
-              <p class="section-kicker">New Feature</p>
-              <h2 id="mcp-title">matlab-mcp-server <span class="version">v0.12.0</span></h2>
+              <p class="section-kicker">Resolved Issue</p>
+              <h2 id="mcp-title">matlab-mcp-server <span class="version">v0.11.4</span></h2>
             </div>
             <div class="section-counts" aria-label="matlab-mcp-server 요약">
-              <span class="count-chip">새로운 기능 1</span>
+              <span class="count-chip">해결된 이슈 1</span>
             </div>
           </div>
         </div>
@@ -878,13 +878,13 @@
           <div class="content-stack">
             <article class="info-panel is-accent">
               <div class="info-panel-head">
-                <h3 class="info-panel-title">새로운 기능</h3>
-                <span class="count-chip">1건</span>
+                <h3 class="info-panel-title">해결된 이슈</h3>
+                <span class="count-chip">Issue #113</span>
               </div>
               <div class="info-panel-body">
                 <div class="info-card emphasis">
-                  <p class="info-card-title">MCP 연결 시 MATLAB에 알림 메시지 표시</p>
-                  <p class="info-card-text">에이전트가 MATLAB MCP Server를 통해 연결되면 MATLAB 커맨드 윈도우에 연결 사실을 알리는 메시지가 표시됩니다. 에이전트가 실제로 MATLAB 세션과 연동되었는지 사용자가 바로 확인할 수 있습니다.</p>
+                  <p class="info-card-title">Windows 환경의 .NET 연동 문제 수정</p>
+                  <p class="info-card-text">Windows 환경에서 <code>CoreDotNetAccessControl</code>이 <code>DotNetFacade</code>의 name-value 인자를 거부하던 문제를 수정했습니다. 이 문제로 인해 .NET 연동 기능을 사용하는 일부 워크플로에서 오류가 발생할 수 있었습니다.</p>
                 </div>
               </div>
             </article>
@@ -897,12 +897,12 @@
           <div class="section-head-row">
             <div>
               <p class="section-kicker">Simulink Agentic Toolkit</p>
-              <h2 id="simulink-title">simulink-agentic-toolkit <span class="version">2026.08.26</span></h2>
+              <h2 id="simulink-title">simulink-agentic-toolkit <span class="version">2026.08.12</span></h2>
             </div>
             <div class="section-counts" aria-label="simulink-agentic-toolkit 요약">
-              <span class="count-chip">새로운 기능 6</span>
-              <span class="count-chip">개선 1</span>
-              <span class="count-chip">버그 수정 3</span>
+              <span class="count-chip">새로운 기능 1</span>
+              <span class="count-chip">개선 2</span>
+              <span class="count-chip">버그 수정 7</span>
             </div>
           </div>
         </div>
@@ -911,34 +911,12 @@
             <article class="info-panel is-accent">
               <div class="info-panel-head">
                 <h3 class="info-panel-title">새로운 기능</h3>
-                <span class="count-chip">6건</span>
+                <span class="count-chip">1건</span>
               </div>
               <div class="info-panel-body">
-                <div class="item-grid">
-                  <article class="info-card emphasis">
-                    <p class="info-card-title"><code>simulink-explain-missing-coverage</code> 스킬</p>
-                    <p class="info-card-text">Simulink Coverage 결과에서 커버리지 목표가 왜 누락되었는지 설명하는 신규 스킬입니다. 도달 불가능한(dead) 로직과 도달 가능하지만 아직 테스트되지 않은 결과를 구분하고, 테스트/필터/설계 수정 중 적절한 조치를 추천합니다.</p>
-                  </article>
-                  <article class="info-card emphasis">
-                    <p class="info-card-title"><code>simulink-generate-embedded-code</code> 스킬</p>
-                    <p class="info-card-text">Simulink 모델과 참조 모델 계층 전체에 대해 Embedded Coder 프로덕션 코드 생성을 위한 타깃, 하드웨어, 최적화, MISRA 준수 설정을 구성하는 신규 스킬입니다.</p>
-                  </article>
-                  <article class="info-card emphasis">
-                    <p class="info-card-title"><code>simulink-customize-a2l</code> 스킬</p>
-                    <p class="info-card-text">Embedded Coder로 Simulink 모델에서 생성한 A2L(ASAP2) 캘리브레이션 파일을 커스터마이즈하는 신규 스킬입니다.</p>
-                  </article>
-                  <article class="info-card emphasis">
-                    <p class="info-card-title"><code>simulink-streaming-dsp</code> 스킬</p>
-                    <p class="info-card-text">프레임 기반 스트리밍 DSP 모델을 만드는 에이전트에게 올바른 블록 선택과 프레임 구성을 안내하는 신규 스킬입니다.</p>
-                  </article>
-                  <article class="info-card emphasis">
-                    <p class="info-card-title"><code>finding-simulink-examples</code> 스킬</p>
-                    <p class="info-card-text">MathWorks가 제공하는 예제 모델 카탈로그를 검색해, 일치하는 예제를 바로 열 수 있는 명령을 반환하는 신규 스킬입니다.</p>
-                  </article>
-                  <article class="info-card emphasis">
-                    <p class="info-card-title">사전 빌드된 툴박스 블록 지원</p>
-                    <p class="info-card-text">설치된 MathWorks 툴박스(Aerospace Blockset, Simscape 등)를 활성화하여, 런타임에 라이브러리를 스캔하지 않고도 에이전트가 필요할 때 해당 블록으로 모델을 구성할 수 있습니다.</p>
-                  </article>
+                <div class="info-card emphasis">
+                  <p class="info-card-title"><code>simulink-use-c-function-block</code> 스킬 추가</p>
+                  <p class="info-card-text">에이전트가 사용자 정의 C/C++ 코드를 Simulink 모델에 통합할 때, 레거시 S-Function 방식 대신 C Function 블록을 구성하도록 안내하는 신규 스킬입니다.</p>
                 </div>
               </div>
             </article>
@@ -946,12 +924,18 @@
             <article class="info-panel">
               <div class="info-panel-head">
                 <h3 class="info-panel-title">스킬 및 도구 개선</h3>
-                <span class="count-chip">1건</span>
+                <span class="count-chip">2건</span>
               </div>
               <div class="info-panel-body">
-                <div class="info-card">
-                  <p class="info-card-title"><code>simulink-curating-library-kg</code> 스킬 이름 변경 및 개선</p>
-                  <p class="info-card-text">라이브러리 큐레이션 스킬이 기존 <code>curating-library-kg</code>에서 이름이 변경되었으며, 가드레일이 명확해지고 커스텀 라이브러리에 대한 블록 선택 가이드가 개선되었습니다. 프롬프트, 스크립트, 에이전트 설정 등에서 이 스킬을 이름으로 참조하고 있었다면 새 이름으로 업데이트해야 합니다.</p>
+                <div class="item-grid">
+                  <article class="info-card">
+                    <p class="info-card-title"><code>simulating-simulink-models</code> 스킬 정교화</p>
+                    <p class="info-card-text">파라미터 오버라이드, 배치 실행, 사용자 지정 입력 등 구체적인 시뮬레이션 설정을 요청할 때만 활성화되도록 개선되어, 다른 스킬이 처리해야 할 일반적인 모델링 요청에서는 더 이상 불필요하게 트리거되지 않습니다.</p>
+                  </article>
+                  <article class="info-card">
+                    <p class="info-card-title"><code>author-modeladvisor-checks</code> 스킬 확장</p>
+                    <p class="info-card-text">포맷 템플릿 검사(format-template checks), 구성 파라미터 검사(configuration-parameter checks), 컴파일 후 컨텍스트 검사(post-compile context checks) 등 더 많은 Model Advisor 검사 유형 작성을 지원하며, 레거시 검사를 최신 상세 스타일로 변환하는 기능도 추가되었습니다.</p>
+                  </article>
                 </div>
               </div>
             </article>
@@ -959,21 +943,37 @@
             <article class="info-panel">
               <div class="info-panel-head">
                 <h3 class="info-panel-title">버그 수정</h3>
-                <span class="count-chip">3건</span>
+                <span class="count-chip">7건</span>
               </div>
               <div class="info-panel-body">
                 <div class="issue-grid">
                   <article class="issue-card">
-                    <p class="issue-title">커스텀 라이브러리 블록이 허용되지 않는 것으로 잘못 보고되는 문제</p>
-                    <p class="issue-copy">블록 이름이 블록 정책 목록(block-policy list)의 블록과 접두사를 공유하는 경우, <code>model_edit</code>이 더 이상 해당 블록을 잘못 거부하지 않습니다. (<a href="https://github.com/matlab/simulink-agentic-toolkit/issues/66" target="_blank" rel="noopener noreferrer">Issue #66</a>)</p>
+                    <p class="issue-title"><code>model_edit</code>의 <code>Sqrt</code>/<code>Product</code> 블록 오생성 문제</p>
+                    <p class="issue-copy"><code>Sqrt</code> 블록을 요청하면 더 이상 역제곱근(1/sqrt(x)) 블록이 생성되지 않고, <code>Product</code> 블록을 요청하면 더 이상 나눗셈(divide) 블록이 생성되지 않습니다. (Issue #58, #57)</p>
                   </article>
                   <article class="issue-card">
-                    <p class="issue-title">깊이 중첩된 컴포넌트 테스트가 시작 전에 실패하는 문제</p>
-                    <p class="issue-copy">테스트 대상 컴포넌트가 모델 계층 깊숙이 중첩되어 있어도 <code>model_test</code>가 네이밍 오류로 실패하지 않고 정상적으로 실행됩니다.</p>
+                    <p class="issue-title"><code>Integrator, Second-Order</code> 블록 오인식 문제</p>
+                    <p class="issue-copy">Simulink Library Browser 명칭으로 <code>Integrator, Second-Order</code> 블록을 추가하면 일반 Integrator가 아닌 실제 2차 적분기(Second-Order Integrator) 블록이 생성되도록 수정했습니다. (Issue #55)</p>
                   </article>
                   <article class="issue-card">
-                    <p class="issue-title">프로젝트 라이브러리 설정이 다른 컴퓨터로 이식되지 않는 문제</p>
-                    <p class="issue-copy">프로젝트에 저장된 커스텀 라이브러리 설정이 이제 상대 경로를 사용하므로, 프로젝트를 다른 컴퓨터로 옮겨도 계속 정상 동작합니다.</p>
+                    <p class="issue-title"><code>setupAgenticToolkit("update")</code> 다운로드 실패 문제</p>
+                    <p class="issue-copy">다운로드 타임아웃이 짧아 느린 네트워크 환경에서 업데이트가 실패하던 문제를 해결했습니다. (Issue #59)</p>
+                  </article>
+                  <article class="issue-card">
+                    <p class="issue-title">일반 모델이 포함된 디렉터리의 커스텀 라이브러리 등록 실패</p>
+                    <p class="issue-copy">라이브러리가 아닌 일반 모델 파일이 함께 있는 디렉터리를 등록할 때 더 이상 실패하지 않으며, 라이브러리가 아닌 파일은 자동으로 건너뜁니다.</p>
+                  </article>
+                  <article class="issue-card">
+                    <p class="issue-title"><code>model_edit</code>에서 DateTime 블록 사용 불가 문제</p>
+                    <p class="issue-copy">이제 에이전트가 모델 작성 시 Simulink DateTime 블록 계열을 추가할 수 있습니다.</p>
+                  </article>
+                  <article class="issue-card">
+                    <p class="issue-title">Simscape 물리 포트 레이블 불일치</p>
+                    <p class="issue-copy">동일 포트에 여러 연결이 있는 Simscape 서브시스템에서, 모델 개요와 읽기 결과의 포트 레이블이 일관되게 표시되도록 수정했습니다.</p>
+                  </article>
+                  <article class="issue-card">
+                    <p class="issue-title">자동 레이아웃 안정성 개선</p>
+                    <p class="issue-copy">서로 다른 다이어그램에 대한 연속적인 레이아웃 요청이 더 이상 오류를 일으키지 않으며, 결과를 사용할 수 없을 때 멈추지 않고 빠르게 실패하도록 개선했습니다.</p>
                   </article>
                 </div>
               </div>
@@ -983,7 +983,7 @@
               <div class="table-title">
                 <strong>참고 링크</strong>
                 <div class="link-row">
-                  <a class="button-link" href="https://github.com/matlab/simulink-agentic-toolkit/compare/2026.08.19...2026.08.26" target="_blank" rel="noopener noreferrer">2026.08.19...2026.08.26 비교 보기</a>
+                  <a class="button-link" href="https://github.com/matlab/simulink-agentic-toolkit/compare/2026.08.05...2026.08.12" target="_blank" rel="noopener noreferrer">2026.08.05...2026.08.12 비교 보기</a>
                   <a class="button-link" href="https://github.com/matlab/simulink-agentic-toolkit" target="_blank" rel="noopener noreferrer">저장소 바로가기</a>
                 </div>
               </div>
@@ -1147,7 +1147,7 @@
     </main>
   </div>
 
-  <footer class="site-footer">Agentic Engineering Newsletter &middot; Build 2026-08-26</footer>
+  <footer class="site-footer">Agentic Engineering Newsletter &middot; Build 2026-08-14</footer>
 
   <script>
     const sectionLinks = Array.from(document.querySelectorAll('.side-nav a'));
