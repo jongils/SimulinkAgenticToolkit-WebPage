@@ -811,10 +811,10 @@
 
   <section class="intro" aria-labelledby="page-title">
     <div class="intro-inner">
-      <p class="eyebrow">BUILD 2026-08-20</p>
+      <p class="eyebrow">BUILD 2026-08-26</p>
       <h1 id="page-title"><span class="title-line">Agentic Engineering</span> <span class="title-line">Newsletter</span></h1>
       <p class="tagline"><span>MATLAB &amp; Simulink Agentic Toolkit이</span> <span>전하는 최신 소식</span></p>
-      <div class="build-badge">BUILD 2026-08-20</div>
+      <div class="build-badge">BUILD 2026-08-26</div>
       <div class="release-grid" aria-label="릴리스 요약">
         <article class="release-card">
           <p class="release-card-title">matlab-mcp-server</p>
@@ -828,12 +828,12 @@
         <article class="release-card">
           <p class="release-card-title">simulink-agentic-toolkit</p>
           <div class="release-card-meta">
-            <span class="release-pill">2026.08.19</span>
+            <span class="release-pill">2026.08.26</span>
           </div>
           <ul class="release-card-list">
-            <li>새로운 기능 1</li>
-            <li>스킬 및 도구 개선 2</li>
-            <li>버그 수정 4</li>
+            <li>새로운 기능 6</li>
+            <li>스킬 및 도구 개선 1</li>
+            <li>버그 수정 3</li>
           </ul>
         </article>
         <article class="release-card">
@@ -883,8 +883,8 @@
               </div>
               <div class="info-panel-body">
                 <div class="info-card emphasis">
-                  <p class="info-card-title">MATLAB MCP Server 연결 시 안내 메시지 표시</p>
-                  <p class="info-card-text">에이전트가 MATLAB MCP Server를 통해 접속하면 MATLAB 커맨드 윈도우에 연결되었음을 알리는 메시지가 표시됩니다. 에이전트가 실제로 MATLAB 세션에 연결된 시점을 사용자가 바로 확인할 수 있습니다.</p>
+                  <p class="info-card-title">MCP 연결 시 MATLAB에 알림 메시지 표시</p>
+                  <p class="info-card-text">에이전트가 MATLAB MCP Server를 통해 연결되면 MATLAB 커맨드 윈도우에 연결 사실을 알리는 메시지가 표시됩니다. 에이전트가 실제로 MATLAB 세션과 연동되었는지 사용자가 바로 확인할 수 있습니다.</p>
                 </div>
               </div>
             </article>
@@ -897,12 +897,12 @@
           <div class="section-head-row">
             <div>
               <p class="section-kicker">Simulink Agentic Toolkit</p>
-              <h2 id="simulink-title">simulink-agentic-toolkit <span class="version">2026.08.19</span></h2>
+              <h2 id="simulink-title">simulink-agentic-toolkit <span class="version">2026.08.26</span></h2>
             </div>
             <div class="section-counts" aria-label="simulink-agentic-toolkit 요약">
-              <span class="count-chip">새로운 기능 1</span>
-              <span class="count-chip">개선 2</span>
-              <span class="count-chip">버그 수정 4</span>
+              <span class="count-chip">새로운 기능 6</span>
+              <span class="count-chip">개선 1</span>
+              <span class="count-chip">버그 수정 3</span>
             </div>
           </div>
         </div>
@@ -911,12 +911,34 @@
             <article class="info-panel is-accent">
               <div class="info-panel-head">
                 <h3 class="info-panel-title">새로운 기능</h3>
-                <span class="count-chip">1건</span>
+                <span class="count-chip">6건</span>
               </div>
               <div class="info-panel-body">
-                <div class="info-card emphasis">
-                  <p class="info-card-title"><code>simulink-control-motors</code> 스킬 추가</p>
-                  <p class="info-card-text">Motor Control Blockset 모델 구축을 안내하는 신규 스킬로, 검증된 아키텍처 패턴과 16가지 모터 구동 토폴로지에 대한 사전 구성 예시를 제공합니다.</p>
+                <div class="item-grid">
+                  <article class="info-card emphasis">
+                    <p class="info-card-title"><code>simulink-explain-missing-coverage</code> 스킬</p>
+                    <p class="info-card-text">Simulink Coverage 결과에서 커버리지 목표가 왜 누락되었는지 설명하는 신규 스킬입니다. 도달 불가능한(dead) 로직과 도달 가능하지만 아직 테스트되지 않은 결과를 구분하고, 테스트/필터/설계 수정 중 적절한 조치를 추천합니다.</p>
+                  </article>
+                  <article class="info-card emphasis">
+                    <p class="info-card-title"><code>simulink-generate-embedded-code</code> 스킬</p>
+                    <p class="info-card-text">Simulink 모델과 참조 모델 계층 전체에 대해 Embedded Coder 프로덕션 코드 생성을 위한 타깃, 하드웨어, 최적화, MISRA 준수 설정을 구성하는 신규 스킬입니다.</p>
+                  </article>
+                  <article class="info-card emphasis">
+                    <p class="info-card-title"><code>simulink-customize-a2l</code> 스킬</p>
+                    <p class="info-card-text">Embedded Coder로 Simulink 모델에서 생성한 A2L(ASAP2) 캘리브레이션 파일을 커스터마이즈하는 신규 스킬입니다.</p>
+                  </article>
+                  <article class="info-card emphasis">
+                    <p class="info-card-title"><code>simulink-streaming-dsp</code> 스킬</p>
+                    <p class="info-card-text">프레임 기반 스트리밍 DSP 모델을 만드는 에이전트에게 올바른 블록 선택과 프레임 구성을 안내하는 신규 스킬입니다.</p>
+                  </article>
+                  <article class="info-card emphasis">
+                    <p class="info-card-title"><code>finding-simulink-examples</code> 스킬</p>
+                    <p class="info-card-text">MathWorks가 제공하는 예제 모델 카탈로그를 검색해, 일치하는 예제를 바로 열 수 있는 명령을 반환하는 신규 스킬입니다.</p>
+                  </article>
+                  <article class="info-card emphasis">
+                    <p class="info-card-title">사전 빌드된 툴박스 블록 지원</p>
+                    <p class="info-card-text">설치된 MathWorks 툴박스(Aerospace Blockset, Simscape 등)를 활성화하여, 런타임에 라이브러리를 스캔하지 않고도 에이전트가 필요할 때 해당 블록으로 모델을 구성할 수 있습니다.</p>
+                  </article>
                 </div>
               </div>
             </article>
@@ -924,18 +946,12 @@
             <article class="info-panel">
               <div class="info-panel-head">
                 <h3 class="info-panel-title">스킬 및 도구 개선</h3>
-                <span class="count-chip">2건</span>
+                <span class="count-chip">1건</span>
               </div>
               <div class="info-panel-body">
-                <div class="item-grid">
-                  <article class="info-card">
-                    <p class="info-card-title"><code>checking-model-compliance</code> 스킬 확장</p>
-                    <p class="info-card-text">기존 컴플라이언스 표준 검사에 더해 Simulink Code Inspector(SLCI) 기준 검사를 지원하게 되었습니다.</p>
-                  </article>
-                  <article class="info-card">
-                    <p class="info-card-title">시뮬레이션 오류 진단 개선</p>
-                    <p class="info-card-text">시뮬레이션 실패 시 <code>model_read_diagnostics</code>가 이전에는 일반적인 메시지 뒤에 가려져 있던 근본 원인, 즉 구체적인 블록 경로와 오류 상세 정보를 함께 보고합니다.</p>
-                  </article>
+                <div class="info-card">
+                  <p class="info-card-title"><code>simulink-curating-library-kg</code> 스킬 이름 변경 및 개선</p>
+                  <p class="info-card-text">라이브러리 큐레이션 스킬이 기존 <code>curating-library-kg</code>에서 이름이 변경되었으며, 가드레일이 명확해지고 커스텀 라이브러리에 대한 블록 선택 가이드가 개선되었습니다. 프롬프트, 스크립트, 에이전트 설정 등에서 이 스킬을 이름으로 참조하고 있었다면 새 이름으로 업데이트해야 합니다.</p>
                 </div>
               </div>
             </article>
@@ -943,25 +959,21 @@
             <article class="info-panel">
               <div class="info-panel-head">
                 <h3 class="info-panel-title">버그 수정</h3>
-                <span class="count-chip">4건</span>
+                <span class="count-chip">3건</span>
               </div>
               <div class="info-panel-body">
                 <div class="issue-grid">
                   <article class="issue-card">
-                    <p class="issue-title">작고 단순한 모델을 빈 모델로 오인식하는 문제</p>
-                    <p class="issue-copy">작고 단순한 모델의 설명을 요청했을 때, 에이전트가 더 이상 이를 빈 모델로 잘못 인식하지 않습니다.</p>
+                    <p class="issue-title">커스텀 라이브러리 블록이 허용되지 않는 것으로 잘못 보고되는 문제</p>
+                    <p class="issue-copy">블록 이름이 블록 정책 목록(block-policy list)의 블록과 접두사를 공유하는 경우, <code>model_edit</code>이 더 이상 해당 블록을 잘못 거부하지 않습니다. (<a href="https://github.com/matlab/simulink-agentic-toolkit/issues/66" target="_blank" rel="noopener noreferrer">Issue #66</a>)</p>
                   </article>
                   <article class="issue-card">
-                    <p class="issue-title">마스킹된 Simscape Power Systems 포트 재연결 오류</p>
-                    <p class="issue-copy">마스킹된 Specialized Power Systems 블록의 포트를 다시 연결할 때, <code>model_edit</code>이 이제 의도한 물리 포트에 정확히 연결합니다. (Issue #63)</p>
+                    <p class="issue-title">깊이 중첩된 컴포넌트 테스트가 시작 전에 실패하는 문제</p>
+                    <p class="issue-copy">테스트 대상 컴포넌트가 모델 계층 깊숙이 중첩되어 있어도 <code>model_test</code>가 네이밍 오류로 실패하지 않고 정상적으로 실행됩니다.</p>
                   </article>
                   <article class="issue-card">
-                    <p class="issue-title">연결 실패 시 기존 연결이 삭제되는 문제</p>
-                    <p class="issue-copy">이미 연결된 입력 포트에 대한 연결 시도가 실패할 때, <code>model_edit</code>이 이제 기존 연결을 삭제하지 않고 그대로 보존합니다. (Issue #62)</p>
-                  </article>
-                  <article class="issue-card">
-                    <p class="issue-title"><code>Trigonometric Function</code> 블록의 근사 계산 문제</p>
-                    <p class="issue-copy">Simulink Library Browser 명칭으로 <code>Trigonometric Function</code> 블록을 추가하면, CORDIC 근사값 대신 정확한 사인 값을 계산하도록 수정하여 결과값 차이를 방지합니다. (Issue #61)</p>
+                    <p class="issue-title">프로젝트 라이브러리 설정이 다른 컴퓨터로 이식되지 않는 문제</p>
+                    <p class="issue-copy">프로젝트에 저장된 커스텀 라이브러리 설정이 이제 상대 경로를 사용하므로, 프로젝트를 다른 컴퓨터로 옮겨도 계속 정상 동작합니다.</p>
                   </article>
                 </div>
               </div>
@@ -971,7 +983,7 @@
               <div class="table-title">
                 <strong>참고 링크</strong>
                 <div class="link-row">
-                  <a class="button-link" href="https://github.com/matlab/simulink-agentic-toolkit/compare/2026.08.12...2026.08.19" target="_blank" rel="noopener noreferrer">2026.08.12...2026.08.19 비교 보기</a>
+                  <a class="button-link" href="https://github.com/matlab/simulink-agentic-toolkit/compare/2026.08.19...2026.08.26" target="_blank" rel="noopener noreferrer">2026.08.19...2026.08.26 비교 보기</a>
                   <a class="button-link" href="https://github.com/matlab/simulink-agentic-toolkit" target="_blank" rel="noopener noreferrer">저장소 바로가기</a>
                 </div>
               </div>
@@ -1135,7 +1147,7 @@
     </main>
   </div>
 
-  <footer class="site-footer">Agentic Engineering Newsletter &middot; Build 2026-08-20</footer>
+  <footer class="site-footer">Agentic Engineering Newsletter &middot; Build 2026-08-26</footer>
 
   <script>
     const sectionLinks = Array.from(document.querySelectorAll('.side-nav a'));
