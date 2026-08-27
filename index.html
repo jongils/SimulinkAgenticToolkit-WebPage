@@ -844,7 +844,7 @@
           <ul class="release-card-list">
             <li>신규 스킬 3</li>
             <li>개선된 스킬 10</li>
-            <li>이름 변경 4</li>
+            <li>스킬 이름 변경 4</li>
           </ul>
         </article>
       </div>
@@ -866,43 +866,11 @@
         <div class="section-head">
           <div class="section-head-row">
             <div>
-              <p class="section-kicker">Resolved Issue</p>
-              <h2 id="mcp-title">matlab-mcp-server <span class="version">v0.11.4</span></h2>
+              <p class="section-kicker">MATLAB MCP Server</p>
+              <h2 id="mcp-title">matlab-mcp-server <span class="version">v0.12.0</span></h2>
             </div>
             <div class="section-counts" aria-label="matlab-mcp-server 요약">
-              <span class="count-chip">해결된 이슈 1</span>
-            </div>
-          </div>
-        </div>
-        <div class="section-body">
-          <div class="content-stack">
-            <article class="info-panel is-accent">
-              <div class="info-panel-head">
-                <h3 class="info-panel-title">해결된 이슈</h3>
-                <span class="count-chip">Issue #113</span>
-              </div>
-              <div class="info-panel-body">
-                <div class="info-card emphasis">
-                  <p class="info-card-title">Windows 환경의 .NET 연동 문제 수정</p>
-                  <p class="info-card-text">Windows 환경에서 <code>CoreDotNetAccessControl</code>이 <code>DotNetFacade</code>의 name-value 인자를 거부하던 문제를 수정했습니다. 이 문제로 인해 .NET 연동 기능을 사용하는 일부 워크플로에서 오류가 발생할 수 있었습니다.</p>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="newsletter-section" id="simulink-agentic-toolkit" aria-labelledby="simulink-title">
-        <div class="section-head">
-          <div class="section-head-row">
-            <div>
-              <p class="section-kicker">Simulink Agentic Toolkit</p>
-              <h2 id="simulink-title">simulink-agentic-toolkit <span class="version">2026.08.12</span></h2>
-            </div>
-            <div class="section-counts" aria-label="simulink-agentic-toolkit 요약">
               <span class="count-chip">새로운 기능 1</span>
-              <span class="count-chip">개선 2</span>
-              <span class="count-chip">버그 수정 7</span>
             </div>
           </div>
         </div>
@@ -915,8 +883,62 @@
               </div>
               <div class="info-panel-body">
                 <div class="info-card emphasis">
-                  <p class="info-card-title"><code>simulink-use-c-function-block</code> 스킬 추가</p>
-                  <p class="info-card-text">에이전트가 사용자 정의 C/C++ 코드를 Simulink 모델에 통합할 때, 레거시 S-Function 방식 대신 C Function 블록을 구성하도록 안내하는 신규 스킬입니다.</p>
+                  <p class="info-card-title">MCP 서버 연결 시 MATLAB에 알림 메시지 표시</p>
+                  <p class="info-card-text">에이전트가 MATLAB MCP Server를 통해 연결되면 MATLAB 명령 창에 연결을 알리는 메시지가 표시됩니다. 사용자가 에이전트의 연결 여부를 즉시 확인할 수 있습니다.</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="newsletter-section" id="simulink-agentic-toolkit" aria-labelledby="simulink-title">
+        <div class="section-head">
+          <div class="section-head-row">
+            <div>
+              <p class="section-kicker">Simulink Agentic Toolkit</p>
+              <h2 id="simulink-title">simulink-agentic-toolkit <span class="version">2026.08.26</span></h2>
+            </div>
+            <div class="section-counts" aria-label="simulink-agentic-toolkit 요약">
+              <span class="count-chip">새로운 기능 6</span>
+              <span class="count-chip">개선 1</span>
+              <span class="count-chip">버그 수정 3</span>
+            </div>
+          </div>
+        </div>
+        <div class="section-body">
+          <div class="content-stack">
+            <article class="info-panel is-accent">
+              <div class="info-panel-head">
+                <h3 class="info-panel-title">새로운 기능</h3>
+                <span class="count-chip">6건</span>
+              </div>
+              <div class="info-panel-body">
+                <div class="item-grid">
+                  <article class="info-card">
+                    <p class="info-card-title"><code>simulink-explain-missing-coverage</code> 스킬 추가</p>
+                    <p class="info-card-text">이미 확보한 Simulink Coverage 결과에서 커버리지 목표가 왜 누락되었는지 설명하는 신규 스킬입니다. 도달 불가능한(죽은) 로직과 도달은 가능하지만 테스트되지 않은 결과를 구분하고, 테스트 추가·필터 적용·설계 수정 중 적절한 조치를 추천합니다.</p>
+                  </article>
+                  <article class="info-card">
+                    <p class="info-card-title"><code>simulink-generate-embedded-code</code> 스킬 추가</p>
+                    <p class="info-card-text">Simulink 모델과 참조 모델 전체에 대해 Embedded Coder 프로덕션 코드 생성을 위한 설정을 구성하는 신규 스킬로, 타깃·하드웨어·최적화·MISRA 준수 설정을 모델 계층 구조 전반에 일괄 적용합니다.</p>
+                  </article>
+                  <article class="info-card">
+                    <p class="info-card-title"><code>simulink-customize-a2l</code> 스킬 추가</p>
+                    <p class="info-card-text">Embedded Coder로 Simulink 모델에서 생성한 A2L(ASAP2) 캘리브레이션 파일을 커스터마이즈하는 신규 스킬입니다.</p>
+                  </article>
+                  <article class="info-card">
+                    <p class="info-card-title"><code>simulink-streaming-dsp</code> 스킬 추가</p>
+                    <p class="info-card-text">프레임 기반 스트리밍 DSP 모델을 구축하는 에이전트를 위한 신규 스킬로, 올바른 블록 선택과 프레임 구성 방법을 안내합니다.</p>
+                  </article>
+                  <article class="info-card">
+                    <p class="info-card-title"><code>finding-simulink-examples</code> 스킬 추가</p>
+                    <p class="info-card-text">MathWorks가 제공하는 예제 모델 카탈로그를 검색해, 일치하는 예제를 바로 열 수 있는 실행 명령을 반환하는 신규 스킬입니다.</p>
+                  </article>
+                  <article class="info-card">
+                    <p class="info-card-title">사전 구축된 툴박스 블록 지원</p>
+                    <p class="info-card-text">설치된 MathWorks 툴박스(Aerospace Blockset, Simscape 등)를 활성화해, 에이전트가 런타임에 라이브러리를 스캔하지 않고도 필요할 때 바로 해당 블록으로 모델을 구성할 수 있습니다.</p>
+                  </article>
                 </div>
               </div>
             </article>
