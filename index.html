@@ -811,10 +811,10 @@
 
   <section class="intro" aria-labelledby="page-title">
     <div class="intro-inner">
-      <p class="eyebrow">BUILD 2026-09-03</p>
+      <p class="eyebrow">BUILD 2026-09-09</p>
       <h1 id="page-title"><span class="title-line">Agentic Engineering</span> <span class="title-line">Newsletter</span></h1>
       <p class="tagline"><span>MATLAB &amp; Simulink Agentic Toolkit이</span> <span>전하는 최신 소식</span></p>
-      <div class="build-badge">BUILD 2026-09-03</div>
+      <div class="build-badge">BUILD 2026-09-09</div>
       <div class="release-grid" aria-label="릴리스 요약">
         <article class="release-card">
   <p class="release-card-title">matlab-mcp-server</p>
@@ -822,20 +822,20 @@
     <span class="release-pill">v0.13.0</span>
   </div>
   <ul class="release-card-list">
-    <li>새로운 기능 1</li>
-    <li>개선 사항 1</li>
+    <li>새로운 기능 1건 (사용자 지정 MATLAB 기본 경로 지원)</li>
+    <li>개선사항 1건 (existing session mode 사용 제한 안내)</li>
   </ul>
 </article>
 
         <article class="release-card">
   <p class="release-card-title">simulink-agentic-toolkit</p>
   <div class="release-card-meta">
-    <span class="release-pill">SATK-2026.09.a</span>
+    <span class="release-pill">SATK-2026.09.b</span>
   </div>
   <ul class="release-card-list">
-    <li>새로운 기능 2</li>
-    <li>스킬 및 도구 개선 2</li>
-    <li>버그 수정 1</li>
+    <li>새로운 기능 2건 (fix-sldv-incompatibility 스킬, model_scan 도구)</li>
+    <li>스킬 및 도구 개선 2건</li>
+    <li>버그 수정 8건</li>
   </ul>
 </article>
 
@@ -845,9 +845,9 @@
     <span class="release-pill">2026.08.27</span>
   </div>
   <ul class="release-card-list">
-    <li>새로운 스킬 3</li>
-    <li>개선된 스킬 10</li>
-    <li>호환성 관련 유의사항 5</li>
+    <li>새로운 스킬 3건</li>
+    <li>스킬 개선 9건</li>
+    <li>스킬 이름 변경 4건, 제거 1건</li>
   </ul>
 </article>
 
@@ -873,7 +873,7 @@
               <p class="section-kicker">MATLAB MCP Server</p>
               <h2 id="mcp-title">matlab-mcp-server <span class="version">v0.13.0</span></h2>
             </div>
-            <div class="section-counts" aria-label="matlab-mcp-server 요약"><span class="count-chip">새로운 기능 1</span><span class="count-chip">개선 사항 1</span></div>
+            <div class="section-counts" aria-label="matlab-mcp-server 요약"><span class="count-chip">새로운 기능 1건 (사용자 지정 MATLAB 기본 경로 지원)</span><span class="count-chip">개선사항 1건 (existing session mode 사용 제한 안내)</span></div>
           </div>
         </div>
         <div class="section-body">
@@ -885,21 +885,25 @@
     </div>
     <div class="info-panel-body">
       <div class="info-card emphasis">
-        <p class="info-card-title">사용자 지정 기본 경로 지원</p>
-        <p class="info-card-text">MATLAB이 사용자 지정 기본 경로(custom base path)로 실행되는 환경을 지원하도록 기능이 추가되어, 표준 설치 경로가 아닌 위치에 MATLAB이 설치된 환경에서도 정상적으로 연결할 수 있습니다.</p>
+        <p class="info-card-title">사용자 지정 MATLAB 기본 경로 지원</p>
+        <p class="info-card-text">MATLAB을 사용자가 지정한 기본 경로(custom base path)에서 실행할 수 있도록
+          지원이 추가되었습니다. 기존에는 고정된 기본 경로에서만 MATLAB 세션을 구동할 수 있었지만, 이제
+          원하는 경로를 지정해 세션을 시작할 수 있습니다.</p>
       </div>
     </div>
   </article>
 
   <article class="info-panel">
     <div class="info-panel-head">
-      <h3 class="info-panel-title">개선 사항</h3>
+      <h3 class="info-panel-title">개선사항</h3>
       <span class="count-chip">1건</span>
     </div>
     <div class="info-panel-body">
       <div class="info-card emphasis">
-        <p class="info-card-title">세션 모드 사용 제약 안내 추가</p>
-        <p class="info-card-text">README에 기존 세션 모드(existing session mode)를 matlab-root, initial-working-folder, matlab-display-mode 인수와 함께 사용하지 말라는 안내가 추가되었습니다. 함께 사용할 경우 오류가 발생합니다.</p>
+        <p class="info-card-title">existing session mode 사용 제한 안내 추가</p>
+        <p class="info-card-text">README에 <code>existing session mode</code>를 <code>matlab-root</code>,
+          <code>initial-working-folder</code>, <code>matlab-display-mode</code> 인자와 함께 사용하지 말라는
+          내용을 명시했습니다. 이 조합으로 실행하면 오류가 발생하므로 주의가 필요합니다.</p>
       </div>
     </div>
   </article>
@@ -913,9 +917,9 @@
           <div class="section-head-row">
             <div>
               <p class="section-kicker">Simulink Agentic Toolkit</p>
-              <h2 id="simulink-title">simulink-agentic-toolkit <span class="version">SATK-2026.09.a</span></h2>
+              <h2 id="simulink-title">simulink-agentic-toolkit <span class="version">SATK-2026.09.b</span></h2>
             </div>
-            <div class="section-counts" aria-label="simulink-agentic-toolkit 요약"><span class="count-chip">새로운 기능 2</span><span class="count-chip">스킬 및 도구 개선 2</span><span class="count-chip">버그 수정 1</span></div>
+            <div class="section-counts" aria-label="simulink-agentic-toolkit 요약"><span class="count-chip">새로운 기능 2건 (fix-sldv-incompatibility 스킬, model_scan 도구)</span><span class="count-chip">스킬 및 도구 개선 2건</span><span class="count-chip">버그 수정 8건</span></div>
           </div>
         </div>
         <div class="section-body">
@@ -928,12 +932,15 @@
     <div class="info-panel-body">
       <div class="item-grid">
         <article class="info-card">
-          <p class="info-card-title">simulink-optimizing-embedded-code 스킬 추가</p>
-          <p class="info-card-text">Embedded Coder로 생성되는 코드에 대해 Simulink 모델을 최적화하도록 에이전트를 안내하는 새 스킬입니다. 런타임, RAM, ROM, 스택 사용량 개선을 지원하며 Embedded Coder 라이선스가 필요합니다.</p>
+          <p class="info-card-title">fix-sldv-incompatibility 스킬</p>
+          <p class="info-card-text">Simulink 모델이 Simulink Design Verifier와 호환되지 않는 원인을 진단하고,
+            해당 원인에 맞는 수정을 적용해 분석이 가능하도록 만드는 새 스킬입니다. Simulink Design Verifier
+            라이선스가 필요합니다.</p>
         </article>
         <article class="info-card">
-          <p class="info-card-title">커스텀 라이브러리 지식베이스 사전 구축 지원</p>
-          <p class="info-card-text">satk.Configuration.setCustomLibraries가 GenerateKB=true 옵션을 지원하게 되어, 구성 시점에 블록 메타데이터로부터 커스텀 라이브러리의 지식베이스를 바로 생성할 수 있습니다. 에이전트가 해당 블록을 즉시 활용할 수 있습니다.</p>
+          <p class="info-card-title">model_scan 도구</p>
+          <p class="info-card-text">디스크에 저장된 Simulink 모델 파일(.slx)을 빠르게 검색하는 새 MCP
+            도구입니다. 모델을 불러오지 않고도 패턴으로 블록, 파라미터, 문자열을 찾을 수 있습니다.</p>
         </article>
       </div>
     </div>
@@ -947,12 +954,15 @@
     <div class="info-panel-body">
       <div class="item-grid">
         <article class="info-card">
-          <p class="info-card-title">generate-requirement-drafts 스킬 안내 개선</p>
-          <p class="info-card-text">모델 검사(model-inspection) 도구 사용에 대한 안내가 개선되어, 요구사항 초안 생성 과정에서 발생하던 오류가 줄었습니다.</p>
+          <p class="info-card-title">모델을 찾지 못했을 때의 오류 메시지 개선</p>
+          <p class="info-card-text">model_edit이 실패 상황(모델 미생성, 경로에 없음, 저장되지 않은 상태로
+            열려 있음)마다 구체적인 안내를 반환하도록 개선되어, 에이전트가 스스로 문제를 파악하고 복구할 수
+            있게 되었습니다.</p>
         </article>
         <article class="info-card">
-          <p class="info-card-title">세션별 초기화 안정성 향상</p>
-          <p class="info-card-text">자동 세션별(per-session) 초기화 설정 단계가 명확해져, 여러 MATLAB 릴리스에 걸쳐 보다 안정적으로 동작합니다.</p>
+          <p class="info-card-title">문서 개선</p>
+          <p class="info-card-text">Windows 경로 예시, 문제 해결 절차, 마이그레이션 가이드, 인용 정보를
+            업데이트했습니다.</p>
         </article>
       </div>
     </div>
@@ -961,13 +971,51 @@
   <article class="info-panel">
     <div class="info-panel-head">
       <h3 class="info-panel-title">버그 수정</h3>
-      <span class="count-chip">1건</span>
+      <span class="count-chip">8건</span>
     </div>
     <div class="info-panel-body">
       <div class="issue-grid">
         <article class="issue-card">
-          <p class="issue-title">model_test의 불필요한 라이선스 체크아웃 수정</p>
-          <p class="issue-copy">Normal 모드로만 실행 가능한 모델에서 model_test를 실행할 때, 필요하지 않은 MATLAB Coder 및 Embedded Coder 라이선스를 체크아웃하던 문제가 수정되었습니다.</p>
+          <p class="issue-title">표시 이름 요청 시 잘못된 블록이 추가되던 문제</p>
+          <p class="issue-copy">동일한 표시 이름의 블록을 제공하는 다른 툴박스가 설치되어 있으면 그쪽 블록이
+            대신 사용되어 기본 파라미터와 연산 결과가 조용히 달라질 수 있었습니다. 이제 model_edit은 표시
+            이름 요청을 항상 Simulink 표준 라이브러리 블록으로 해석합니다. (#68)</p>
+        </article>
+        <article class="issue-card">
+          <p class="issue-title">Discrete FIR Filter 대신 Discrete Filter가 추가되던 문제</p>
+          <p class="issue-copy">"Discrete FIR Filter"를 요청하면 피드백(IIR) 특성을 가진 다른 블록인
+            "Discrete Filter"가 생성되던 문제를 해결했습니다. (#71)</p>
+        </article>
+        <article class="issue-card">
+          <p class="issue-title">create_subsystem의 정수형 포트 개수 인터페이스 오류</p>
+          <p class="issue-copy">{"inputs": 2, "outputs": 1}처럼 정수로 포트 개수를 전달하면 내부 오류가
+            발생하고 잘못된 형태의 서브시스템이 남던 문제를 해결했습니다. (#70)</p>
+        </article>
+        <article class="issue-card">
+          <p class="issue-title">Sqrt/Product/Sum 블록의 연산 설정이 잘못 표시되던 문제</p>
+          <p class="issue-copy">역제곱근으로 설정된 Sqrt 블록이 단순 제곱근으로, 벡터를 축약하도록 설정된
+            Product/Sum 블록이 단순 통과로 표시되던 문제를 model_read에서 해결했습니다. (#69)</p>
+        </article>
+        <article class="issue-card">
+          <p class="issue-title">대형 서브시스템에서 model_read가 빈 결과를 반환하던 문제</p>
+          <p class="issue-copy">블록 수가 매우 많은 서브시스템을 읽을 때 내용 없이 빈 결과가 반환되던 문제를
+            해결했습니다.</p>
+        </article>
+        <article class="issue-card">
+          <p class="issue-title">재설치 후 도구 접근이 끊기던 문제</p>
+          <p class="issue-copy">이미 초기화된 MATLAB 세션 위에서 setupAgenticToolkit("install")을 실행하면
+            MATLAB을 재시작할 때까지 모든 툴킷 도구가 조용히 사용 불가능해지던 문제를 해결했습니다.</p>
+        </article>
+        <article class="issue-card">
+          <p class="issue-title">Variant Subsystem 처리 오류</p>
+          <p class="issue-copy">비활성 Variant Subsystem 하위 항목이 편집 작업 중 조용히 누락되어 블록이
+            빠지거나 빌드가 실패할 수 있던 문제를 model_edit에서 해결했습니다.</p>
+        </article>
+        <article class="issue-card">
+          <p class="issue-title">DisableTelemetry 설정이 유지되지 않던 문제</p>
+          <p class="issue-copy">DisableTelemetry=true를 다시 지정하지 않고 configure를 실행하면 데이터 수집이
+            조용히 다시 켜지던 문제를 해결했습니다. 다시 켜려면 이제 DisableTelemetry=false를 명시적으로
+            전달해야 합니다.</p>
         </article>
       </div>
     </div>
@@ -977,7 +1025,7 @@
     <div class="table-title">
       <strong>참고 링크</strong>
       <div class="link-row">
-        <a class="button-link" href="https://github.com/matlab/simulink-agentic-toolkit/compare/2026.08.26...v2026.09.a" target="_blank" rel="noopener noreferrer">2026.08.26 → v2026.09.a 비교 보기</a>
+        <a class="button-link" href="https://github.com/matlab/simulink-agentic-toolkit/compare/SATK-2026.09.a...SATK-2026.09.b" target="_blank" rel="noopener noreferrer">SATK-2026.09.a...SATK-2026.09.b 비교 보기</a>
         <a class="button-link" href="https://github.com/matlab/simulink-agentic-toolkit" target="_blank" rel="noopener noreferrer">저장소 바로가기</a>
       </div>
     </div>
@@ -994,7 +1042,7 @@
               <p class="section-kicker">MATLAB Agentic Toolkit</p>
               <h2 id="matlab-title">matlab-agentic-toolkit <span class="version">2026.08.27</span></h2>
             </div>
-            <div class="section-counts" aria-label="matlab-agentic-toolkit 요약"><span class="count-chip">새로운 스킬 3</span><span class="count-chip">개선된 스킬 10</span><span class="count-chip">호환성 관련 유의사항 5</span></div>
+            <div class="section-counts" aria-label="matlab-agentic-toolkit 요약"><span class="count-chip">새로운 스킬 3건</span><span class="count-chip">스킬 개선 9건</span><span class="count-chip">스킬 이름 변경 4건, 제거 1건</span></div>
           </div>
         </div>
         <div class="section-body">
@@ -1007,16 +1055,19 @@
     <div class="info-panel-body">
       <div class="item-grid">
         <article class="info-card">
-          <p class="info-card-title">matlab-engineer-tabular-features 추가</p>
-          <p class="info-card-text">AI 및 통계 스킬 그룹에 추가된 스킬로, 단일 응답(single-response) 표 형식 분류 또는 회귀 문제에서 최적의 특징을 엔지니어링하고 선택합니다.</p>
+          <p class="info-card-title">matlab-engineer-tabular-features</p>
+          <p class="info-card-text">AI and Statistics 그룹에 추가. 단일 응답 테이블형 분류/회귀 작업을 위한
+            특징(feature) 엔지니어링 및 선택을 지원합니다.</p>
         </article>
         <article class="info-card">
-          <p class="info-card-title">matlab-use-symbolic-math 추가</p>
-          <p class="info-card-text">수학 및 최적화 스킬 그룹에 추가된 스킬로, Symbolic Math Toolbox를 사용하여 해석적 해, 방정식 풀이, 미적분, 변환, 코드 생성을 위한 올바른 MATLAB 코드를 생성합니다.</p>
+          <p class="info-card-title">matlab-use-symbolic-math</p>
+          <p class="info-card-text">Math and Optimization 그룹에 추가. Symbolic Math Toolbox를 활용해 해석적
+            해, 방정식 풀이, 미적분, 변환, 코드 생성을 위한 올바른 MATLAB 코드를 생성합니다.</p>
         </article>
         <article class="info-card">
-          <p class="info-card-title">matlab-analyze-spectrum 추가</p>
-          <p class="info-card-text">신호 처리 스킬 그룹에 추가된 스킬로, 비모수(nonparametric) 및 모수(parametric) 추정기를 사용하여 신호 스펙트럼을 분석합니다.</p>
+          <p class="info-card-title">matlab-analyze-spectrum</p>
+          <p class="info-card-text">Signal Processing 그룹에 추가. 비모수(nonparametric) 및 모수(parametric)
+            추정기를 이용해 신호 스펙트럼을 분석합니다.</p>
         </article>
       </div>
     </div>
@@ -1024,50 +1075,54 @@
 
   <article class="info-panel">
     <div class="info-panel-head">
-      <h3 class="info-panel-title">개선된 스킬</h3>
-      <span class="count-chip">10건</span>
+      <h3 class="info-panel-title">스킬 개선</h3>
+      <span class="count-chip">9건</span>
     </div>
     <div class="info-panel-body">
       <div class="item-grid">
         <article class="info-card">
           <p class="info-card-title">matlab-add-awgn</p>
-          <p class="info-card-text">OFDM 잡음 주입 패턴과 부분 점유(partially-occupied) 그리드에 대한 SNR 변환 규칙이 추가되었습니다.</p>
+          <p class="info-card-text">OFDM 노이즈 주입 패턴과, 일부만 점유된 그리드에 대한 SNR 변환 규칙을
+            추가했습니다.</p>
         </article>
         <article class="info-card">
           <p class="info-card-title">matlab-classify-tabular-data</p>
-          <p class="info-card-text">헬퍼 스크립트와 모델 카탈로그를 재구성하여 명확성을 높였고, 계층적 서브샘플링과 개선된 내보내기(export) 워크플로 스크립트가 추가되었습니다.</p>
+          <p class="info-card-text">헬퍼 스크립트와 모델 카탈로그를 정리해 가독성을 높이고, 계층적
+            (stratified) 서브샘플링과 개선된 내보내기 워크플로 스크립트를 추가했습니다.</p>
         </article>
         <article class="info-card">
           <p class="info-card-title">matlab-discover-hardware</p>
-          <p class="info-card-text">명시적인 스킬 경계(skill-boundary) 안내와 장치별 동적 스킬 라우팅이 추가되었습니다.</p>
+          <p class="info-card-text">스킬 경계에 대한 명시적 안내와 장치별 동적 스킬 라우팅을 추가했습니다.</p>
         </article>
         <article class="info-card">
           <p class="info-card-title">matlab-migrate-settings</p>
-          <p class="info-card-text">설치 자동 감지 참고 자료, DLL 경로 추출 안내가 추가되었으며 스킬 지침이 다듬어졌습니다.</p>
+          <p class="info-card-text">설치 자동 감지 참고 자료, DLL 경로 추출 안내를 추가하고 스킬 지침을
+            다듬었습니다.</p>
         </article>
         <article class="info-card">
           <p class="info-card-title">matlab-modernize-code</p>
-          <p class="info-card-text">오디오/비디오, 통신, 제어 시스템, 핵심 함수, 딥러닝, 영상 처리, 매핑, 최적화, 신호 처리, 통계/머신러닝 등 도메인별 코드 현대화 안내가 추가되었습니다.</p>
+          <p class="info-card-text">오디오/비디오, 통신, 제어 시스템, 핵심 함수, 딥러닝, 영상 처리, 매핑,
+            최적화, 신호 처리, 통계/ML 등 도메인별 현대화 가이드를 추가했습니다.</p>
         </article>
         <article class="info-card">
           <p class="info-card-title">matlab-use-opcua-client</p>
-          <p class="info-card-text">OPC UA 네임스페이스를 탐색하고 검사하기 위한 서버 노드 탐색 및 노드 함수 참조가 추가되었습니다.</p>
+          <p class="info-card-text">OPC UA 네임스페이스를 탐색/검사하기 위한 서버 노드 탐색 기능과 노드 함수
+            참고 자료를 추가했습니다.</p>
         </article>
         <article class="info-card">
           <p class="info-card-title">matlab-validate-function-arguments</p>
-          <p class="info-card-text">@islogical 마이그레이션 안내가 개선되어, 허용 입력 집합이 의도치 않게 넓어지는 것을 방지합니다.</p>
+          <p class="info-card-text"><code>@islogical</code> 마이그레이션 안내를 개선하여 허용 입력 범위가
+            의도치 않게 넓어지는 것을 방지했습니다.</p>
         </article>
         <article class="info-card">
           <p class="info-card-title">simbiology-build-model</p>
-          <p class="info-card-text">위치 지정 스크립트를 포함한 다이어그램 레이아웃 엔진, PK 라이브러리 안내, 앱 생명주기 관리, API 치트시트 참조가 추가되었습니다.</p>
+          <p class="info-card-text">배치 스크립트를 포함한 다이어그램 레이아웃 엔진, PK 라이브러리 안내, 앱
+            생명주기 관리, API 치트시트 참고 자료를 추가했습니다.</p>
         </article>
         <article class="info-card">
-          <p class="info-card-title">simbiology-fit-model</p>
-          <p class="info-card-text">NCA 분석 안내와 확장된 피팅(fitting) 워크플로 지침이 추가되었습니다.</p>
-        </article>
-        <article class="info-card">
-          <p class="info-card-title">simbiology-simulate-model</p>
-          <p class="info-card-text">민감도 분석 및 확률적 시뮬레이션(stochastic simulation) 안내가 추가되었습니다.</p>
+          <p class="info-card-title">simbiology-fit-model / simbiology-simulate-model</p>
+          <p class="info-card-text">NCA 분석 안내 및 확장된 피팅 워크플로 지침(fit-model), 민감도 분석과
+            확률적(stochastic) 시뮬레이션 안내(simulate-model)를 추가했습니다.</p>
         </article>
       </div>
     </div>
@@ -1075,13 +1130,13 @@
 
   <article class="info-panel">
     <div class="table-title">
-      <strong>스킬 명칭 변경</strong>
+      <strong>스킬 이름 변경</strong>
       <span class="count-chip">4개</span>
     </div>
-    <div class="table-wrap" role="region" aria-label="스킬 명칭 변경 표" tabindex="0">
+    <div class="table-wrap" role="region" aria-label="스킬 이름 변경 표" tabindex="0">
       <table>
         <thead>
-          <tr><th>이전 이름</th><th>현재 이름</th></tr>
+          <tr><th>이전</th><th>지금</th></tr>
         </thead>
         <tbody>
           <tr><td>matlab-build-simbiology-model</td><td>simbiology-build-model</td></tr>
@@ -1100,8 +1155,9 @@
     </div>
     <div class="info-panel-body">
       <div class="info-card emphasis">
-        <p class="info-card-title">matlab-normalize-image 제거</p>
-        <p class="info-card-text">matlab-normalize-image 스킬이 제거되었습니다. 이미지 표시 및 전처리에는 matlab-display-image를 사용하십시오.</p>
+        <p class="info-card-title">matlab-normalize-image 스킬 제거</p>
+        <p class="info-card-text">이미지 표시 및 전처리가 필요한 경우 matlab-display-image 스킬을 대신
+          사용하세요.</p>
       </div>
     </div>
   </article>
@@ -1112,7 +1168,7 @@
     </main>
   </div>
 
-  <footer class="site-footer">Agentic Engineering Newsletter &middot; Build 2026-09-03</footer>
+  <footer class="site-footer">Agentic Engineering Newsletter &middot; Build 2026-09-09</footer>
 
   <script>
     const sectionLinks = Array.from(document.querySelectorAll('.side-nav a'));
