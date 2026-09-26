@@ -812,18 +812,18 @@
 
   <section class="intro" aria-labelledby="page-title">
     <div class="intro-inner">
-      <p class="eyebrow">BUILD 2026-09-24</p>
+      <p class="eyebrow">BUILD 2026-09-25</p>
       <h1 id="page-title"><span class="title-line">Agentic Engineering</span> <span class="title-line">Newsletter</span></h1>
       <p class="tagline"><span>MATLAB &amp; Simulink Agentic Toolkit이</span> <span>전하는 최신 소식</span></p>
-      <div class="build-badge">BUILD 2026-09-24</div>
+      <div class="build-badge">BUILD 2026-09-25</div>
       <div class="release-grid" aria-label="릴리스 요약">
         <article class="release-card">
   <p class="release-card-title">matlab-mcp-server</p>
   <div class="release-card-meta">
-    <span class="release-pill">v0.13.1</span>
+    <span class="release-pill">v0.14.0</span>
   </div>
   <ul class="release-card-list">
-    <li>해결된 이슈 1</li>
+    <li>기능 개선 1</li>
   </ul>
 </article>
 
@@ -846,8 +846,8 @@
   </div>
   <ul class="release-card-list">
     <li>새로운 스킬 5</li>
-    <li>개선된 스킬 4</li>
-    <li>호환성 관련 유의사항 2</li>
+    <li>스킬 개선 4</li>
+    <li>호환성 유의사항 2</li>
   </ul>
 </article>
 
@@ -860,7 +860,6 @@
     <li>새로운 스킬 그룹 4</li>
     <li>새로운 스킬 8</li>
     <li>개선된 스킬 2</li>
-    <li>설치 방식 개선</li>
   </ul>
 </article>
 
@@ -885,22 +884,22 @@
           <div class="section-head-row">
             <div>
               <p class="section-kicker">MATLAB MCP Server</p>
-              <h2 id="mcp-title">matlab-mcp-server <span class="version">v0.13.1</span></h2>
+              <h2 id="mcp-title">matlab-mcp-server <span class="version">v0.14.0</span></h2>
             </div>
-            <div class="section-counts" aria-label="matlab-mcp-server 요약"><span class="count-chip">해결된 이슈 1</span></div>
+            <div class="section-counts" aria-label="matlab-mcp-server 요약"><span class="count-chip">기능 개선 1</span></div>
           </div>
         </div>
         <div class="section-body">
           <div class="content-stack">
   <article class="info-panel is-accent">
     <div class="info-panel-head">
-      <h3 class="info-panel-title">해결된 이슈</h3>
+      <h3 class="info-panel-title">기능 개선</h3>
       <span class="count-chip">1건</span>
     </div>
     <div class="info-panel-body">
       <div class="info-card emphasis">
-        <p class="info-card-title">MCPB 레지스트리 메타데이터 수정</p>
-        <p class="info-card-text">MCPB(MCP Bundle) 레지스트리에 등록되는 메타데이터 정보에 있던 오류를 수정했습니다.</p>
+        <p class="info-card-title">텔레메트리 수집 방식 업데이트</p>
+        <p class="info-card-text">MATLAB MCP 서버의 사용 현황 텔레메트리 수집 로직이 업데이트되었습니다. 이번 릴리스에서 별도로 공지된 다른 변경 사항은 없습니다.</p>
       </div>
     </div>
   </article>
@@ -929,7 +928,7 @@
     <div class="info-panel-body">
       <div class="info-card emphasis">
         <p class="info-card-title">simscape-write-ssc 스킬 추가</p>
-        <p class="info-card-text">커스텀 컴포넌트의 동작, 파라미터화, 인터페이스 정의를 위한 Simscape Language 소스 파일(.ssc)을 작성, 수정, 검증하는 과정을 안내하는 새 스킬입니다. Simscape 제품이 필요합니다.</p>
+        <p class="info-card-text">커스텀 컴포넌트의 동작, 파라미터화, 인터페이스를 위한 Simscape Language 소스 파일(.ssc)을 작성, 수정, 검증하는 과정을 안내하는 새 스킬입니다. Simscape 제품이 필요합니다.</p>
       </div>
     </div>
   </article>
@@ -942,7 +941,7 @@
     <div class="info-panel-body">
       <div class="info-card emphasis">
         <p class="info-card-title">커스텀 라이브러리 설정을 프로젝트 디렉터리에 저장 가능</p>
-        <p class="info-card-text"><code>satk.Configuration</code>의 <code>setCustomLibraries</code>, <code>setLibrary</code> 메서드가 선택적 <code>Location</code> 인자를 지원합니다. 기본 사용자 전용 위치 대신 커밋 가능한 프로젝트 디렉터리에 설정을 기록할 수 있으며, 라이브러리 경로가 해당 위치 기준 상대 경로로 저장되어 이식성이 확보됩니다. 이를 통해 커스텀 라이브러리 설정을 소스 관리 시스템에 커밋하고 팀원과 공유할 수 있습니다.</p>
+        <p class="info-card-text"><code>satk.Configuration</code>의 <code>setCustomLibraries</code>, <code>setLibrary</code> 메서드가 선택적 <code>Location</code> 인자를 지원하여, 기본 사용자 전용 위치 대신 커밋 가능한 프로젝트 디렉터리에 설정을 저장할 수 있습니다. 라이브러리 경로가 해당 위치 기준 상대 경로로 저장되어, 커스텀 라이브러리 설정을 소스 관리에 포함해 팀 전체가 공유할 수 있습니다.</p>
       </div>
     </div>
   </article>
@@ -955,24 +954,24 @@
     <div class="info-panel-body">
       <div class="issue-grid">
         <article class="issue-card">
-          <p class="issue-title">model_edit가 잘못된 블록/연산자를 생성하던 문제 수정</p>
-          <p class="issue-copy">"Extract Bits" 블록 추가 시 다른 동작을 하는 "Float Extract Bits" 블록이 생성되던 문제, "Truth Table" 추가 시 "Combinatorial Logic" 블록이 생성되던 문제, Relational Operator를 &gt;=로 설정했는데 &lt;=로 반전되던 문제가 모두 수정되었습니다. (#73, #74, #77)</p>
+          <p class="issue-title">model_edit의 잘못된 블록 생성 및 연산자 반전 문제 수정</p>
+          <p class="issue-copy">"Extract Bits" 블록 추가 시 다른 동작인 "Float Extract Bits" 블록이 생성되던 문제, "Truth Table" 추가 시 "Combinatorial Logic" 블록이 생성되던 문제, Relational Operator를 &gt;=로 설정할 때 반대로 &lt;=로 뒤집히던 문제를 수정했습니다. (이슈 #73, #74, #77)</p>
         </article>
         <article class="issue-card">
-          <p class="issue-title">.mdl 파일만 있는 커스텀 라이브러리 폴더 인식</p>
-          <p class="issue-copy">setCustomLibraries에 .slx 없이 레거시 .mdl 파일만 있는 폴더를 지정하면 블록이 0개 등록되던 문제를 수정했습니다. 이제 .slx와 .mdl 파일이 모두 인식됩니다. (#72)</p>
+          <p class="issue-title">.mdl 파일만 있는 커스텀 라이브러리 폴더 인식 실패 수정</p>
+          <p class="issue-copy">레거시 .mdl 라이브러리 파일만 있는 디렉터리를 setCustomLibraries로 지정하면 .slx 파일만 인식되어 블록이 0개로 등록되던 문제를 수정했습니다. 이제 .slx와 .mdl 파일을 모두 인식합니다. (이슈 #72)</p>
         </article>
         <article class="issue-card">
-          <p class="issue-title">마일스톤 문자가 올라간 새 릴리스 감지 실패 수정</p>
-          <p class="issue-copy">setupAgenticToolkit("update")가 SATK-2026.09.a에서 SATK-2026.09.b로 업데이트할 때 두 버전을 동일하게 취급하여 "Everything is up to date"로 잘못 보고하던 문제를 수정했습니다. (#78, #79)</p>
+          <p class="issue-title">마일스톤 문자가 다른 최신 릴리스 감지 실패 수정</p>
+          <p class="issue-copy">setupAgenticToolkit("update") 실행 시 SATK-2026.09.a에서 SATK-2026.09.b로의 업데이트를 동일 버전으로 취급하여 "Everything is up to date"라고 잘못 보고하던 문제를 수정했습니다. (이슈 #78, #79)</p>
         </article>
         <article class="issue-card">
-          <p class="issue-title">model_edit의 커스텀 라이브러리 정책 미준수 수정</p>
-          <p class="issue-copy">.satk/ 폴더 없이 플랫 설정 파일만 사용하는 프로젝트에서 커스텀 라이브러리 블록만 쓰도록 구성했음에도 내장 블록이 추가되던 문제를 수정했습니다. 이제 이런 구성도 올바르게 감지되어 정책이 적용됩니다. (#82)</p>
+          <p class="issue-title">블록 추가 시 커스텀 라이브러리 정책 미준수 문제 수정</p>
+          <p class="issue-copy">.satk/ 폴더 없이 플랫 설정 파일만 사용하는 프로젝트에서 커스텀 라이브러리 블록 사용이 설정되어 있어도 내장 블록이 추가될 수 있던 문제를 수정했습니다. 이제 이러한 설정도 올바르게 감지되고 적용됩니다. (이슈 #82)</p>
         </article>
         <article class="issue-card">
           <p class="issue-title">자동 레이아웃 개선</p>
-          <p class="issue-copy">이미 배치가 끝난 다이어그램에 블록을 추가할 때 기존에 배치해 둔 블록들이 재배치될 가능성이 줄었고, 블록/신호 이름 배치가 겹치는 현상도 줄었습니다. 피드백 루프, 병렬 분기, 물리 연결이 있는 모델에서 선 라우팅이 더 깔끔해졌습니다.</p>
+          <p class="issue-copy">이미 정리된 다이어그램에 블록을 추가할 때 기존 배치가 재배열되는 빈도가 줄었고, 블록·신호 이름 배치의 겹침이 줄었으며, 피드백 루프·병렬 분기·물리적 연결이 있는 모델에서 선 배선이 더 깔끔해졌습니다.</p>
         </article>
       </div>
     </div>
@@ -999,37 +998,37 @@
               <p class="section-kicker">MATLAB Agentic Toolkit</p>
               <h2 id="matlab-title">matlab-agentic-toolkit <span class="version">MATK-2026.09.b</span></h2>
             </div>
-            <div class="section-counts" aria-label="matlab-agentic-toolkit 요약"><span class="count-chip">새로운 스킬 5</span><span class="count-chip">개선된 스킬 4</span><span class="count-chip">호환성 관련 유의사항 2</span></div>
+            <div class="section-counts" aria-label="matlab-agentic-toolkit 요약"><span class="count-chip">새로운 스킬 5</span><span class="count-chip">스킬 개선 4</span><span class="count-chip">호환성 유의사항 2</span></div>
           </div>
         </div>
         <div class="section-body">
           <div class="content-stack">
   <article class="info-panel is-accent">
     <div class="info-panel-head">
-      <h3 class="info-panel-title">기존 스킬 그룹에 추가된 새로운 스킬</h3>
+      <h3 class="info-panel-title">기존 스킬 그룹에 추가된 새 스킬</h3>
       <span class="count-chip">5건</span>
     </div>
     <div class="info-panel-body">
       <div class="item-grid">
         <article class="info-card">
-          <p class="info-card-title">matlab-interpret-machine-learning-model (AI and Statistics)</p>
-          <p class="info-card-text">MATLAB에서 학습된 표 형태 머신러닝 모델(분류 또는 회귀)을 해석하고 설명하는 스킬입니다.</p>
+          <p class="info-card-title">matlab-interpret-machine-learning-model (AI 및 통계)</p>
+          <p class="info-card-text">MATLAB에서 학습된 표 형식(tabular) 머신러닝 모델(분류 또는 회귀)을 해석하고 설명합니다.</p>
         </article>
         <article class="info-card">
-          <p class="info-card-title">matlab-process-images (Image Processing and Computer Vision)</p>
-          <p class="info-card-text">Image Processing Toolbox를 이용해 이미지를 처리, 분석, 변환하는 스킬입니다.</p>
+          <p class="info-card-title">matlab-process-images (영상 처리 및 컴퓨터 비전)</p>
+          <p class="info-card-text">Image Processing Toolbox를 이용해 이미지를 처리, 분석, 변환합니다.</p>
         </article>
         <article class="info-card">
-          <p class="info-card-title">matlab-use-visual-inspection (Image Processing and Computer Vision)</p>
-          <p class="info-card-text">Visual Inspection Toolbox를 이용해 머신비전 검사 시스템을 구축하는 스킬입니다.</p>
+          <p class="info-card-title">matlab-use-visual-inspection (영상 처리 및 컴퓨터 비전)</p>
+          <p class="info-card-text">Visual Inspection Toolbox를 이용해 머신 비전 검사 시스템을 구축합니다.</p>
         </article>
         <article class="info-card">
-          <p class="info-card-title">matlab-evaluate-acoustic-metrics (Signal Processing)</p>
-          <p class="info-card-text">음향, 심리음향, 음성 품질 지표를 선택하고 계산하는 스킬입니다.</p>
+          <p class="info-card-title">matlab-evaluate-acoustic-metrics (신호 처리)</p>
+          <p class="info-card-text">음향, 심리음향, 음성 품질 지표를 선택하고 계산합니다.</p>
         </article>
         <article class="info-card">
-          <p class="info-card-title">matlab-detect-capture-usrp (Wireless Communications)</p>
-          <p class="info-card-text">에너지 또는 프리앰블 트리거를 이용해 USRP 라디오에서 RF 신호를 탐지하고 캡처하는 스킬입니다.</p>
+          <p class="info-card-title">matlab-detect-capture-usrp (무선 통신)</p>
+          <p class="info-card-text">에너지 또는 프리앰블 트리거를 사용해 USRP 라디오에서 RF 신호를 검출·캡처합니다.</p>
         </article>
       </div>
     </div>
@@ -1044,11 +1043,11 @@
       <div class="item-grid">
         <article class="info-card">
           <p class="info-card-title">matlab-add-awgn</p>
-          <p class="info-card-text">5G/OFDM 파형에 노이즈를 추가하는 방법을 안내하며, nrEqualizeMMSE와 nrPDSCHDecode용 수신 노이즈 분산 설정 방법이 추가되었습니다.</p>
+          <p class="info-card-text">5G/OFDM 파형에 노이즈를 추가하는 안내가 개선되었고, nrEqualizeMMSE 및 nrPDSCHDecode를 위한 수신단 노이즈 분산 계산 안내가 추가되었습니다.</p>
         </article>
         <article class="info-card">
           <p class="info-card-title">matlab-build-chart</p>
-          <p class="info-card-text">차트 생성을 위한 코드 패턴이 개선되었습니다.</p>
+          <p class="info-card-text">차트 생성 코드 패턴이 개선되었습니다.</p>
         </article>
         <article class="info-card">
           <p class="info-card-title">matlab-generate-5g-waveform</p>
@@ -1056,7 +1055,7 @@
         </article>
         <article class="info-card">
           <p class="info-card-title">matlab-install-products</p>
-          <p class="info-card-text">mpm 설치를 에이전트가 수행했음을 나타내기 위해 입력 파일에 caller=agent 값을 고정으로 기록합니다.</p>
+          <p class="info-card-text">에이전트가 수행한 mpm 설치임을 표시하기 위해 입력 파일에 고정값 caller=agent를 기록하도록 개선되었습니다.</p>
         </article>
       </div>
     </div>
@@ -1071,11 +1070,11 @@
       <div class="item-grid">
         <article class="info-card">
           <p class="info-card-title">matlab-run-tests / matlab-write-tests 스킬 그룹 이동</p>
-          <p class="info-card-text">두 스킬이 MATLAB Core 스킬 그룹에서 MATLAB Software Development 스킬 그룹으로 이동했습니다. 둘 중 하나라도 설치했다면 설치 프로그램을 다시 실행해 새 그룹 구성을 반영해야 합니다.</p>
+          <p class="info-card-text">MATLAB Core 그룹에서 MATLAB Software Development 그룹으로 이동했습니다. 둘 중 하나라도 설치했다면 새 그룹 분류를 적용하기 위해 설치 관리자를 다시 실행해야 합니다.</p>
         </article>
         <article class="info-card">
-          <p class="info-card-title">matlab-use-experiment-manager가 matlab-create-experiment 대체</p>
-          <p class="info-card-text">Experiment Manager에서 실험을 생성, 수정, 삭제할 때 UI와 실시간으로 동기화되는 기능이 추가되었습니다. matlab-create-experiment를 설치했다면 matlab-use-experiment-manager로 교체해야 합니다.</p>
+          <p class="info-card-title">matlab-use-experiment-manager가 matlab-create-experiment를 대체</p>
+          <p class="info-card-text">Experiment Manager에서 실험을 생성, 수정, 삭제할 때 실시간 UI 동기화 기능이 추가되었습니다. matlab-create-experiment를 설치했다면 matlab-use-experiment-manager로 교체해야 합니다.</p>
         </article>
       </div>
     </div>
@@ -1092,7 +1091,7 @@
               <p class="section-kicker">Polyspace Agentic Toolkit</p>
               <h2 id="polyspace-title">polyspace-agentic-toolkit <span class="version">v2026.09.08</span></h2>
             </div>
-            <div class="section-counts" aria-label="polyspace-agentic-toolkit 요약"><span class="count-chip">새로운 스킬 그룹 4</span><span class="count-chip">새로운 스킬 8</span><span class="count-chip">개선된 스킬 2</span><span class="count-chip">설치 방식 개선</span></div>
+            <div class="section-counts" aria-label="polyspace-agentic-toolkit 요약"><span class="count-chip">새로운 스킬 그룹 4</span><span class="count-chip">새로운 스킬 8</span><span class="count-chip">개선된 스킬 2</span></div>
           </div>
         </div>
         <div class="section-body">
@@ -1106,19 +1105,19 @@
       <div class="item-grid">
         <article class="info-card">
           <p class="info-card-title">Polyspace Core (polyspace-core)</p>
-          <p class="info-card-text">항상 설치되는 그룹입니다. Polyspace 설치 루트를 확인하고, 빌드 옵션을 구성하며, 모든 워크플로가 공유하는 문서 진입점을 제공합니다.</p>
+          <p class="info-card-text">항상 설치되는 그룹으로, Polyspace 설치 경로를 확인하고 빌드 옵션을 구성하며 모든 워크플로우가 공유하는 문서 진입점을 제공합니다.</p>
         </article>
         <article class="info-card">
           <p class="info-card-title">Polyspace Static Core (polyspace-static-core)</p>
-          <p class="info-card-text">정적 분석 제품(Polyspace as You Code, Bug Finder, Code Prover) 중 하나라도 있으면 설치되는 공유 워크플로입니다. 결과 검토, 수정, 정당화, 체커 구성, 체커/옵션 문서 조회를 제공합니다.</p>
+          <p class="info-card-text">Polyspace as You Code, Bug Finder, Code Prover 중 하나라도 있으면 함께 설치되는 공통 정적 분석 워크플로우입니다. 결과 검토, 수정, 저스티파이(justify), 체커 구성, 체커/옵션 문서 조회 기능을 제공합니다.</p>
         </article>
         <article class="info-card">
           <p class="info-card-title">Polyspace Bug Finder (polyspace-bug-finder)</p>
-          <p class="info-card-text">여러 파일 또는 전체 컴포넌트에 걸쳐 결함과 코딩 표준 준수 여부를 분석합니다.</p>
+          <p class="info-card-text">여러 파일 또는 컴포넌트 전체에 걸쳐 결함과 코딩 표준 준수 여부를 분석합니다.</p>
         </article>
         <article class="info-card">
           <p class="info-card-title">Polyspace Code Prover (polyspace-code-prover)</p>
-          <p class="info-card-text">런타임 오류가 없음을 증명하고, red/orange/green/gray 체크를 검토하며, 미증명(orange) 체크를 분류합니다.</p>
+          <p class="info-card-text">런타임 오류가 없음을 증명하고, red/orange/green/gray 체크를 검토하며, 증명되지 않은(orange) 체크를 분류합니다.</p>
         </article>
       </div>
     </div>
@@ -1126,42 +1125,42 @@
 
   <article class="info-panel">
     <div class="info-panel-head">
-      <h3 class="info-panel-title">기존 스킬 그룹에 추가된 새로운 스킬</h3>
+      <h3 class="info-panel-title">기존 스킬 그룹에 추가된 새 스킬</h3>
       <span class="count-chip">8건</span>
     </div>
     <div class="info-panel-body">
       <div class="item-grid">
         <article class="info-card">
           <p class="info-card-title">run-polyspace-bug-finder-analysis (Bug Finder)</p>
-          <p class="info-card-text">여러 파일 또는 전체 컴포넌트에 걸쳐 Bug Finder를 실행합니다.</p>
+          <p class="info-card-text">여러 파일 또는 컴포넌트 전체에 걸쳐 Bug Finder 분석을 실행합니다.</p>
         </article>
         <article class="info-card">
           <p class="info-card-title">run-polyspace-code-prover-analysis (Code Prover)</p>
-          <p class="info-card-text">C/C++ 코드에 대해 Code Prover를 실행합니다.</p>
+          <p class="info-card-text">C/C++ 코드에 대해 Code Prover 분석을 실행합니다.</p>
         </article>
         <article class="info-card">
           <p class="info-card-title">review-polyspace-code-prover-results (Code Prover)</p>
-          <p class="info-card-text">체크 결과를 읽고 우선순위를 매깁니다.</p>
+          <p class="info-card-text">체크 결과를 읽고 우선순위를 정합니다.</p>
         </article>
         <article class="info-card">
           <p class="info-card-title">triage-orange-checks (Code Prover)</p>
-          <p class="info-card-text">미증명(orange) 체크를 어떻게 처리할지 판단합니다.</p>
+          <p class="info-card-text">증명되지 않은(orange) 체크에 대해 어떻게 처리할지 결정합니다.</p>
         </article>
         <article class="info-card">
-          <p class="info-card-title">resolve-polyspace-root (Polyspace Core)</p>
-          <p class="info-card-text">명령줄 대체 실행을 위한 설치 루트를 찾습니다.</p>
+          <p class="info-card-title">resolve-polyspace-root (Core)</p>
+          <p class="info-card-text">명령줄 폴백을 위한 설치 루트 경로를 확인합니다.</p>
         </article>
         <article class="info-card">
           <p class="info-card-title">polyspace-review-findings (Static Core)</p>
-          <p class="info-card-text">결과를 읽고, 설명하고, 우선순위를 매기는 전용 스킬입니다.</p>
+          <p class="info-card-text">결과를 읽고, 설명하고, 우선순위를 정하는 전용 스킬입니다.</p>
         </article>
         <article class="info-card">
           <p class="info-card-title">polyspace-justify-in-database (Static Core)</p>
-          <p class="info-card-text">결과 데이터베이스에 검토 상태와 근거를 기록하고, 재실행 시에도 이를 유지합니다.</p>
+          <p class="info-card-text">결과 데이터베이스에 검토 상태와 근거를 기록하고, 재실행 시에도 유지되도록 합니다.</p>
         </article>
         <article class="info-card">
-          <p class="info-card-title">run-polyspace-test-xunit-tests (Polyspace Test)</p>
-          <p class="info-card-text">PSTUnit 테스트를 빌드하고 실행하며, 필요 시 코드 커버리지를 계산합니다. Make/CMake 기반 빌드 시스템이 있으면 테스트를 통합한 빌드 파일 사본을 생성하고, 누락된 테스트 등록 같은 흔한 문제도 처리합니다.</p>
+          <p class="info-card-title">run-polyspace-test-xunit-tests (Test)</p>
+          <p class="info-card-text">PSTUnit 테스트를 빌드하고 실행하며, 필요 시 코드 커버리지를 계산합니다. Make/CMake 기반 빌드 시스템이 있으면 테스트를 포함하도록 빌드 파일 사본을 생성하고, 테스트 미등록 같은 흔한 문제를 처리합니다.</p>
         </article>
       </div>
     </div>
@@ -1176,11 +1175,11 @@
       <div class="item-grid">
         <article class="info-card">
           <p class="info-card-title">run-polyspace-as-you-code-analysis</p>
-          <p class="info-card-text">공유 검토/수정/정당화/체커/문서 스킬이 polyspace-static-core로 이동함에 따라, 현재 편집 중인 파일에 대한 파일 단위 분석에 집중하도록 개선되었습니다.</p>
+          <p class="info-card-text">공유 검토·수정·저스티파이·체커·문서 스킬이 polyspace-static-core로 이동함에 따라, 현재 편집 중인 파일 단위 분석에 집중하도록 개선되었습니다.</p>
         </article>
         <article class="info-card">
           <p class="info-card-title">generate-polyspace-test-xunit-tests</p>
-          <p class="info-card-text">PSTUnit 테스트 작성 가이드에 C 및 C++ API 참조가 추가되어 범위가 확장되었습니다.</p>
+          <p class="info-card-text">C 및 C++ API 레퍼런스를 포함하도록 PSTUnit 테스트 작성 가이드가 확장되었습니다.</p>
         </article>
       </div>
     </div>
@@ -1188,14 +1187,16 @@
 
   <article class="info-panel">
     <div class="table-title">
-      <strong>이름이 변경되거나 이동된 스킬</strong>
-      <span class="count-chip">10개</span>
+      <strong>이름이 변경되거나 이동한 스킬</strong>
+      <span class="count-chip">9개</span>
     </div>
-    <div class="table-wrap" role="region" aria-label="이름이 변경되거나 이동된 스킬 표" tabindex="0">
+    <div class="table-wrap" role="region" aria-label="이름이 변경되거나 이동한 스킬 표" tabindex="0">
       <table>
-        <thead><tr><th>이전 (polyspace-as-you-code)</th><th>현재</th></tr></thead>
+        <thead>
+          <tr><th>이전</th><th>변경 후</th></tr>
+        </thead>
         <tbody>
-          <tr><td>run-analysis</td><td>polyspace-as-you-code/run-polyspace-as-you-code-analysis</td></tr>
+          <tr><td>run-analysis (polyspace-as-you-code)</td><td>polyspace-as-you-code/run-polyspace-as-you-code-analysis</td></tr>
           <tr><td>configure-build-options</td><td>polyspace-core/polyspace-configure-build-options</td></tr>
           <tr><td>documentation-entry-points</td><td>polyspace-core/polyspace-documentation-entry-points</td></tr>
           <tr><td>configure-checkers</td><td>polyspace-static-core/polyspace-configure-checkers</td></tr>
@@ -1203,32 +1204,31 @@
           <tr><td>find-option-documentation</td><td>polyspace-static-core/polyspace-find-option-documentation</td></tr>
           <tr><td>fix-findings</td><td>polyspace-static-core/polyspace-fix-findings</td></tr>
           <tr><td>query-justification-catalog</td><td>polyspace-static-core/polyspace-query-justification-catalog</td></tr>
-          <tr><td>justify-findings</td><td>polyspace-static-core/polyspace-justify-in-code 및 polyspace-static-core/polyspace-justify-in-database로 분리</td></tr>
+          <tr><td>polyspace-as-you-code/justify-findings</td><td>polyspace-justify-in-code + polyspace-justify-in-database (두 스킬로 분리)</td></tr>
           <tr><td>polyspace-test/generate-xunit-tests</td><td>polyspace-test/generate-polyspace-test-xunit-tests</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="info-card-text">단일 polyspace-as-you-code 그룹이 공유 그룹(polyspace-core, polyspace-static-core)과 제품별 그룹으로 분리되고, 스킬 이름이 일관된 polyspace-* 규칙으로 통일되었습니다. 설치된 스킬을 갱신하려면 "Set up the Polyspace Agentic Toolkit"으로 설치를 다시 실행하세요.</p>
   </article>
 
   <article class="info-panel">
     <div class="info-panel-head">
-      <h3 class="info-panel-title">Agentic Toolkit Installer</h3>
+      <h3 class="info-panel-title">설치 관리자 개선사항</h3>
       <span class="count-chip">3건</span>
     </div>
     <div class="info-panel-body">
       <div class="item-grid">
         <article class="info-card">
           <p class="info-card-title">선택적 설치</p>
-          <p class="info-card-text">설치 과정에서 어떤 Polyspace 제품이 설치되어 있는지 감지하고, 확인 후 해당하는 스킬 그룹만 설치합니다. polyspace-core는 항상 설치되고, 정적 분석 제품이 하나라도 있으면 polyspace-static-core가 함께 설치됩니다. polyspace-test는 polyspace-static-core를 필요로 하지 않습니다.</p>
+          <p class="info-card-text">설치 관리자가 설치되어 있는 Polyspace 제품을 감지하고, 확인 후 해당하는 스킬 그룹만 설치합니다. polyspace-core는 항상 설치되며, 정적 분석 제품이 하나라도 있으면 polyspace-static-core가 함께 설치됩니다. polyspace-test는 정적 분석 제품 없이도 동적 테스트를 지원합니다. 로드되는 스킬 수가 줄어 에이전트가 올바른 스킬을 더 안정적으로 호출합니다.</p>
         </article>
         <article class="info-card">
           <p class="info-card-title">타겟 스킬 등록</p>
-          <p class="info-card-text">scripts/install-global-skills.sh가 이제 선택적으로 스킬 그룹 이름 목록을 인자로 받아, 심볼릭 링크 기반 에이전트가 선택한 그룹만 등록할 수 있습니다(인자가 없으면 기존처럼 전체 설치).</p>
+          <p class="info-card-text">scripts/install-global-skills.sh가 스킬 그룹 이름 목록을 선택적으로 받아, 심볼릭 링크 기반 에이전트가 선택한 그룹만 등록할 수 있습니다(인자가 없으면 이전처럼 전체 설치).</p>
         </article>
         <article class="info-card">
-          <p class="info-card-title">Claude Code 자동 종속성</p>
-          <p class="info-card-text">각 제품 플러그인(polyspace-as-you-code, polyspace-bug-finder, polyspace-code-prover)이 polyspace-static-core를 종속성으로 선언하여, 제품 플러그인을 설치하면 공유 정적 분석 스킬이 자동으로 함께 설치됩니다.</p>
+          <p class="info-card-title">Claude Code용 자동 종속성 설정</p>
+          <p class="info-card-text">각 제품 플러그인(polyspace-as-you-code, polyspace-bug-finder, polyspace-code-prover)이 polyspace-static-core를 종속성으로 선언하여, 어떤 제품 플러그인을 설치하더라도 공유 정적 분석 스킬이 자동으로 함께 설치됩니다.</p>
         </article>
       </div>
     </div>
@@ -1243,10 +1243,10 @@
       <div class="item-grid">
         <article class="info-card">
           <p class="info-card-title">MCP 도구 범위 확장</p>
-          <p class="info-card-text">MCP Tools 문서에 Bug Finder/Code Prover 분석 도구(run_polyspace_bug_finder, run_polyspace_code_prover), Code Prover 전용 조회 도구(get_code_prover_assumptions, get_concurrency_model, get_orange_sources, get_static_ranges), get_dead_code_blocks를 포함한 추가 결과 탐색 도구가 반영되었습니다.</p>
+          <p class="info-card-text">MCP 도구 문서가 Bug Finder/Code Prover 분석(run_polyspace_bug_finder, run_polyspace_code_prover), Code Prover 전용 검사(get_code_prover_assumptions, get_concurrency_model, get_orange_sources, get_static_ranges), get_dead_code_blocks를 포함한 추가 결과 탐색 도구까지 다루도록 확장되었습니다.</p>
         </article>
         <article class="info-card">
-          <p class="info-card-title">문서화</p>
+          <p class="info-card-title">문서 업데이트</p>
           <p class="info-card-text">README에 제품별 스킬 그룹, 선택적 설치 모델, 제품-그룹 매핑 표가 문서화되었습니다.</p>
         </article>
       </div>
@@ -1259,7 +1259,7 @@
     </main>
   </div>
 
-  <footer class="site-footer">Agentic Engineering Newsletter &middot; Build 2026-09-24</footer>
+  <footer class="site-footer">Agentic Engineering Newsletter &middot; Build 2026-09-25</footer>
 
   <script>
     const sectionLinks = Array.from(document.querySelectorAll('.side-nav a'));
