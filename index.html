@@ -812,10 +812,10 @@
 
   <section class="intro" aria-labelledby="page-title">
     <div class="intro-inner">
-      <p class="eyebrow">BUILD 2026-11-05</p>
+      <p class="eyebrow">BUILD 2026-11-11</p>
       <h1 id="page-title"><span class="title-line">Agentic Engineering</span> <span class="title-line">Newsletter</span></h1>
       <p class="tagline"><span>MATLAB &amp; Simulink Agentic Toolkit이</span> <span>전하는 최신 소식</span></p>
-      <div class="build-badge">BUILD 2026-11-05</div>
+      <div class="build-badge">BUILD 2026-11-11</div>
       <div class="release-grid" aria-label="릴리스 요약">
         <article class="release-card">
   <p class="release-card-title">matlab-mcp-server</p>
@@ -824,19 +824,19 @@
   </div>
   <ul class="release-card-list">
     <li>개선 사항 3</li>
-    <li>nodesktop 오류를 isError로 반환</li>
   </ul>
 </article>
 
         <article class="release-card">
   <p class="release-card-title">simulink-agentic-toolkit</p>
   <div class="release-card-meta">
-    <span class="release-pill">SATK-2026.11.a</span>
+    <span class="release-pill">SATK-2026.11.b</span>
   </div>
   <ul class="release-card-list">
-    <li>Agentic Toolkit Installer 지원</li>
-    <li>스킬 및 도구 개선 1</li>
-    <li>버그 수정 2</li>
+    <li>새로운 스킬 그룹 1</li>
+    <li>새로운 스킬 2</li>
+    <li>개선된 스킬 및 도구 2</li>
+    <li>버그 수정 1</li>
   </ul>
 </article>
 
@@ -847,7 +847,7 @@
   </div>
   <ul class="release-card-list">
     <li>새로운 스킬 2</li>
-    <li>스킬 개선 3</li>
+    <li>개선된 스킬 3</li>
     <li>버그 수정 2</li>
   </ul>
 </article>
@@ -858,7 +858,7 @@
     <span class="release-pill">2026.11.05</span>
   </div>
   <ul class="release-card-list">
-    <li>스킬 개선 4</li>
+    <li>개선된 스킬 4</li>
     <li>호환성 관련 유의사항 2</li>
   </ul>
 </article>
@@ -886,7 +886,7 @@
               <p class="section-kicker">MATLAB MCP Server</p>
               <h2 id="mcp-title">matlab-mcp-server <span class="version">v0.16.0</span></h2>
             </div>
-            <div class="section-counts" aria-label="matlab-mcp-server 요약"><span class="count-chip">개선 사항 3</span><span class="count-chip">nodesktop 오류를 isError로 반환</span></div>
+            <div class="section-counts" aria-label="matlab-mcp-server 요약"><span class="count-chip">개선 사항 3</span></div>
           </div>
         </div>
         <div class="section-body">
@@ -903,12 +903,12 @@
           <p class="info-card-text">데스크톱 모드에서 <code>input</code> 프롬프트와 MATLAB 디버거에 대한 지원이 개선되었습니다.</p>
         </article>
         <article class="info-card">
-          <p class="info-card-title">nodesktop 모드 오류를 도구 오류로 반환</p>
+          <p class="info-card-title">nodesktop 모드 오류 반환 방식 개선</p>
           <p class="info-card-text">nodesktop 모드에서 <code>evaluate_matlab_code</code>, <code>run_matlab_file</code>, <code>run_matlab_test_file</code>이 발생시키는 MATLAB 오류가 이제 오류 식별자와 함께 도구 오류(<code>isError</code>)로 반환됩니다.</p>
         </article>
         <article class="info-card">
-          <p class="info-card-title">README: Agentic Toolkit Installer 권장</p>
-          <p class="info-card-text">Claude Code, GitHub Copilot CLI, OpenAI Codex에서 MATLAB MCP Server를 설치할 때 Agentic Toolkit Installer(GitHub)를 사용하도록 README가 갱신되었습니다.</p>
+          <p class="info-card-title">README 설치 안내 갱신</p>
+          <p class="info-card-text">Claude Code, GitHub Copilot CLI, OpenAI Codex에 MATLAB MCP Server를 설치할 때 Agentic Toolkit Installer(GitHub) 사용을 권장하도록 README가 갱신되었습니다.</p>
         </article>
       </div>
     </div>
@@ -923,9 +923,9 @@
           <div class="section-head-row">
             <div>
               <p class="section-kicker">Simulink Agentic Toolkit</p>
-              <h2 id="simulink-title">simulink-agentic-toolkit <span class="version">SATK-2026.11.a</span></h2>
+              <h2 id="simulink-title">simulink-agentic-toolkit <span class="version">SATK-2026.11.b</span></h2>
             </div>
-            <div class="section-counts" aria-label="simulink-agentic-toolkit 요약"><span class="count-chip">Agentic Toolkit Installer 지원</span><span class="count-chip">스킬 및 도구 개선 1</span><span class="count-chip">버그 수정 2</span></div>
+            <div class="section-counts" aria-label="simulink-agentic-toolkit 요약"><span class="count-chip">새로운 스킬 그룹 1</span><span class="count-chip">새로운 스킬 2</span><span class="count-chip">개선된 스킬 및 도구 2</span><span class="count-chip">버그 수정 1</span></div>
           </div>
         </div>
         <div class="section-body">
@@ -937,37 +937,69 @@
     </div>
     <div class="info-panel-body">
       <div class="info-card emphasis">
-        <p class="info-card-title">명령줄에서 세 가지 도구를 함께 설치</p>
-        <p class="info-card-text">Claude Code, GitHub Copilot CLI, OpenAI Codex 사용자는 Agentic Toolkit Installer로 MATLAB Agentic Toolkit, Simulink Agentic Toolkit, MATLAB MCP Server를 명령줄에서 한 번에 설치할 수 있습니다. 이 설치 방법을 사용하면 <code>satk_initialize</code>를 더 이상 실행할 필요가 없고, 코딩 에이전트가 기본적으로 <code>session-mode=auto</code>로 구성됩니다. <code>session-mode=existing</code>을 원하면 코딩 에이전트를 수동으로 구성하고 공유하려는 MATLAB 세션에서 <code>shareMATLABSession</code>을 실행해야 합니다.</p>
+        <p class="info-card-title">명령줄에서 세 가지 구성 요소를 한 번에 설치</p>
+        <p class="info-card-text">Claude Code, GitHub Copilot CLI, OpenAI Codex 사용자는 Agentic Toolkit Installer로 MATLAB Agentic Toolkit, Simulink Agentic Toolkit, MATLAB MCP Server를 명령줄에서 함께 설치할 수 있습니다. Installer로 Simulink Agentic Toolkit을 설치하면 <code>satk_initialize</code>를 더 이상 실행할 필요가 없고, 코딩 에이전트가 기본적으로 <code>session-mode=auto</code>로 구성됩니다. <code>session-mode=existing</code>을 원하면 코딩 에이전트를 수동으로 구성하고 공유할 MATLAB 세션에서 <code>shareMATLABSession</code>을 실행해야 합니다.</p>
+      </div>
+    </div>
+  </article>
+  <article class="info-panel">
+    <div class="info-panel-head">
+      <h3 class="info-panel-title">새로운 스킬 그룹</h3>
+      <span class="count-chip">1건</span>
+    </div>
+    <div class="info-panel-body">
+      <div class="info-card emphasis">
+        <p class="info-card-title">Aerospace</p>
+        <p class="info-card-text">Aerospace Blockset을 사용하는 Simulink 모델용 스킬을 제공하며, 첫 번째 스킬은 simulink-compose-multi-vehicle-system입니다.</p>
+      </div>
+    </div>
+  </article>
+  <article class="info-panel">
+    <div class="info-panel-head">
+      <h3 class="info-panel-title">새로운 스킬</h3>
+      <span class="count-chip">2건</span>
+    </div>
+    <div class="info-panel-body">
+      <div class="item-grid">
+        <article class="info-card">
+          <p class="info-card-title">simulink-compose-multi-vehicle-system</p>
+          <p class="info-card-text">Kinematic Aerospace Actor 블록과 <code>Aero.trajectory</code> 임무 계획 함수로 다중 비행체 항공우주 시뮬레이션을 생성합니다. Aerospace Blockset R2026b가 필요합니다.</p>
+        </article>
+        <article class="info-card">
+          <p class="info-card-title">simulink-integrate-python-code</p>
+          <p class="info-card-text">Python Code 블록으로 Simulink 모델 안에서 Python 코드를 실행하고 통합합니다. Simulink R2025a 이상이 필요합니다.</p>
+        </article>
       </div>
     </div>
   </article>
   <article class="info-panel">
     <div class="info-panel-head">
       <h3 class="info-panel-title">스킬 및 도구 개선</h3>
-      <span class="count-chip">1건</span>
+      <span class="count-chip">2건</span>
     </div>
     <div class="info-panel-body">
-      <div class="info-card emphasis">
-        <p class="info-card-title">simulink-optimizing-embedded-code</p>
-        <p class="info-card-text">프로파일링으로 확인된 생성 코드의 핫스팟을 해당 코드를 만든 모델 블록까지 추적하여, 코드 크기와 실행 시간을 좌우하는 블록을 대상으로 최적화를 제안합니다. Embedded Coder가 필요합니다.</p>
+      <div class="item-grid">
+        <article class="info-card">
+          <p class="info-card-title">model_edit</p>
+          <p class="info-card-text">Simulink 다이어그램을 더 깔끔하고 빠르게 배치합니다. 새 블록을 기존 블록과 겹치지 않게 놓고, 이름과 배선을 처리하며, 교차와 꺾임이 훨씬 적은 배선을 그리고, 편집이 더 빨리 끝납니다.</p>
+        </article>
+        <article class="info-card">
+          <p class="info-card-title">arranging-simulink-layouts</p>
+          <p class="info-card-text">겹침을 더 안정적으로 감지하며, 서브시스템을 그룹화하거나 확장한 뒤 전체 다이어그램을 다시 배치하기 전에 코딩 에이전트가 먼저 확인을 요청합니다.</p>
+        </article>
       </div>
     </div>
   </article>
   <article class="info-panel">
     <div class="info-panel-head">
       <h3 class="info-panel-title">버그 수정</h3>
-      <span class="count-chip">2건</span>
+      <span class="count-chip">1건</span>
     </div>
     <div class="info-panel-body">
       <div class="issue-grid">
         <article class="issue-card">
-          <p class="issue-title">model_edit: Stateflow 차트 자동 레이아웃</p>
-          <p class="issue-copy">포트가 있는 Stateflow 차트에서 자동 레이아웃이 실패하거나 전이(transition)가 잘못 그려지던 문제를 수정했습니다.</p>
-        </article>
-        <article class="issue-card">
-          <p class="issue-title">model_edit: create_subsystem의 인터페이스 포트</p>
-          <p class="issue-copy"><code>create_subsystem</code>이 서브시스템 인터페이스 포트에 등록된 사용자 정의 라이브러리의 Inport/Outport 블록을 사용하도록 수정했습니다.</p>
+          <p class="issue-title">model_edit: 사용자 정의 라이브러리 검색 수정</p>
+          <p class="issue-copy">등록된 사용자 정의 라이브러리의 검색 문제가 수정되어, 해당 폴더를 MATLAB 검색 경로에 수동으로 추가하지 않아도 계속 검색됩니다.</p>
         </article>
       </div>
     </div>
@@ -976,7 +1008,7 @@
     <div class="table-title">
       <strong>참고 링크</strong>
       <div class="link-row">
-        <a class="button-link" href="https://github.com/matlab/simulink-agentic-toolkit/compare/SATK-2026.10.d...SATK-2026.11.a" target="_blank" rel="noopener noreferrer">SATK-2026.10.d → SATK-2026.11.a 비교 보기</a>
+        <a class="button-link" href="https://github.com/matlab/simulink-agentic-toolkit/compare/SATK-2026.11.a...SATK-2026.11.b" target="_blank" rel="noopener noreferrer">SATK-2026.11.a...SATK-2026.11.b 비교 보기</a>
         <a class="button-link" href="https://github.com/matlab/simulink-agentic-toolkit" target="_blank" rel="noopener noreferrer">저장소 바로가기</a>
       </div>
     </div>
@@ -993,32 +1025,32 @@
               <p class="section-kicker">MATLAB Agentic Toolkit</p>
               <h2 id="matlab-title">matlab-agentic-toolkit <span class="version">MATK-2026.11.a</span></h2>
             </div>
-            <div class="section-counts" aria-label="matlab-agentic-toolkit 요약"><span class="count-chip">새로운 스킬 2</span><span class="count-chip">스킬 개선 3</span><span class="count-chip">버그 수정 2</span></div>
+            <div class="section-counts" aria-label="matlab-agentic-toolkit 요약"><span class="count-chip">새로운 스킬 2</span><span class="count-chip">개선된 스킬 3</span><span class="count-chip">버그 수정 2</span></div>
           </div>
         </div>
         <div class="section-body">
           <div class="content-stack">
   <article class="info-panel is-accent">
     <div class="info-panel-head">
-      <h3 class="info-panel-title">기존 스킬 그룹에 추가된 새 스킬</h3>
+      <h3 class="info-panel-title">기존 스킬 그룹의 새로운 스킬</h3>
       <span class="count-chip">2건</span>
     </div>
     <div class="info-panel-body">
       <div class="item-grid">
         <article class="info-card">
-          <p class="info-card-title">matlab-configure-java (MATLAB External Language Interfaces)</p>
+          <p class="info-card-title">MATLAB External Language Interfaces — matlab-configure-java</p>
           <p class="info-card-text">Java Runtime Environment(JRE) 구성, OpenJDK 설치, JDK 선택, 로드 상태 해석을 지원합니다.</p>
         </article>
         <article class="info-card">
-          <p class="info-card-title">matlab-fit-tire-model (Automotive)</p>
-          <p class="info-card-text">측정된 힘 및 모멘트 데이터에 타이어 모델을 피팅하고 타이어 속성 파일(TIR)로 내보냅니다.</p>
+          <p class="info-card-title">Automotive — matlab-fit-tire-model</p>
+          <p class="info-card-text">측정된 힘/모멘트 데이터에 타이어 모델을 피팅하고 타이어 속성 파일(TIR)로 내보냅니다.</p>
         </article>
       </div>
     </div>
   </article>
   <article class="info-panel">
     <div class="info-panel-head">
-      <h3 class="info-panel-title">스킬 개선</h3>
+      <h3 class="info-panel-title">개선된 스킬</h3>
       <span class="count-chip">3건</span>
     </div>
     <div class="info-panel-body">
@@ -1029,11 +1061,11 @@
         </article>
         <article class="info-card">
           <p class="info-card-title">matlab-build-industrial-hmi</p>
-          <p class="info-card-text">대시보드를 만들기 전에 검토 가능한 계획을 보여 주고 승인을 기다립니다.</p>
+          <p class="info-card-text">대시보드를 구축하기 전에 검토 가능한 계획을 보여주고 승인을 기다립니다.</p>
         </article>
         <article class="info-card">
           <p class="info-card-title">matlab-optimize-performance</p>
-          <p class="info-card-text">R2026b에서 샘플링 프로파일러를 사용하여 더 빠르고 효율적으로 성능을 프로파일링합니다.</p>
+          <p class="info-card-text">R2026b에서 샘플링 프로파일러를 사용해 더 빠르고 효율적으로 성능을 프로파일링합니다.</p>
         </article>
       </div>
     </div>
@@ -1047,11 +1079,11 @@
       <div class="issue-grid">
         <article class="issue-card">
           <p class="issue-title">matlab-build-chart</p>
-          <p class="issue-copy"><code>plot</code> 이전에 <code>colororder</code>를 호출해도 초기화되지 않도록 수정했고, 내보내기 후 Figure가 닫히지 않도록 수정했습니다.</p>
+          <p class="issue-copy"><code>plot</code> 이전에 호출할 때 <code>colororder</code>가 초기화되는 문제와, 내보내기 후 Figure가 닫히는 문제를 방지합니다.</p>
         </article>
         <article class="issue-card">
           <p class="issue-title">matlab-install-products</p>
-          <p class="issue-copy">설치 계획에서 내부 설치 프로그램 설정을 제외하도록 수정했습니다.</p>
+          <p class="issue-copy">설치 계획에서 내부 설치 프로그램 설정을 제외합니다.</p>
         </article>
       </div>
     </div>
@@ -1068,18 +1100,17 @@
               <p class="section-kicker">Polyspace Agentic Toolkit</p>
               <h2 id="polyspace-title">polyspace-agentic-toolkit <span class="version">v2026.11.05</span></h2>
             </div>
-            <div class="section-counts" aria-label="polyspace-agentic-toolkit 요약"><span class="count-chip">스킬 개선 4</span><span class="count-chip">호환성 관련 유의사항 2</span></div>
+            <div class="section-counts" aria-label="polyspace-agentic-toolkit 요약"><span class="count-chip">개선된 스킬 4</span><span class="count-chip">호환성 관련 유의사항 2</span></div>
           </div>
         </div>
         <div class="section-body">
           <div class="content-stack">
   <article class="info-panel is-accent">
     <div class="info-panel-head">
-      <h3 class="info-panel-title">스킬 개선</h3>
+      <h3 class="info-panel-title">개선된 스킬</h3>
       <span class="count-chip">4건</span>
     </div>
     <div class="info-panel-body">
-      <p class="info-card-text">이번 릴리즈(2026.11.05)는 Polyspace Agentic Toolkit을 Agentic Toolkit Installer에 대비시키며, 일부 Polyspace 제품만 설치된 환경도 지원합니다.</p>
       <div class="item-grid">
         <article class="info-card">
           <p class="info-card-title">polyspace-agentic-toolkit-setup</p>
@@ -1087,7 +1118,7 @@
         </article>
         <article class="info-card">
           <p class="info-card-title">triage-orange-checks</p>
-          <p class="info-card-text">volatile 변수 등 더 다양한 종류의 오렌지 소스를 처리합니다.</p>
+          <p class="info-card-text">volatile 변수 등 더 다양한 종류의 orange 원인을 처리합니다.</p>
         </article>
         <article class="info-card">
           <p class="info-card-title">polyspace-configure-checkers</p>
@@ -1108,13 +1139,25 @@
     <div class="info-panel-body">
       <div class="item-grid">
         <article class="info-card">
-          <p class="info-card-title">MCP 서버의 Polyspace 설치 위치 결정 방식 변경</p>
+          <p class="info-card-title">Polyspace 설치 경로 결정 방식 변경</p>
           <p class="info-card-text"><code>--polyspace-root</code>를 지정하지 않으면 MCP 서버는 <code>PATH</code>에서 처음 발견되는 Polyspace 설치를 사용합니다. 환경 변수 <code>MW_MCP_SERVER_POLYSPACE_ROOT</code>가 <code>POLYSPACE_ROOT</code>를 대체합니다.</p>
         </article>
         <article class="info-card">
-          <p class="info-card-title">Claude Code 플러그인이 polyspace-static-core를 자동 설치하지 않음</p>
-          <p class="info-card-text">Agentic Toolkit Installer를 염두에 두고, Claude Code 플러그인은 더 이상 <code>polyspace-static-core</code>를 자동으로 설치하지 않습니다. 플러그인을 수동으로 설치하는 경우 이것도 함께 설치해야 합니다. 설치된 스킬을 업데이트하려면 설정("Set up the Polyspace Agentic Toolkit")을 다시 실행하십시오.</p>
+          <p class="info-card-title">Claude Code 플러그인의 polyspace-static-core 자동 설치 중단</p>
+          <p class="info-card-text">Agentic Toolkit Installer 도입을 앞두고, Claude Code 플러그인이 더 이상 <code>polyspace-static-core</code>를 자동으로 설치하지 않습니다. 플러그인을 수동으로 설치하는 경우 이것도 함께 설치해야 합니다.</p>
         </article>
+      </div>
+    </div>
+  </article>
+  <article class="info-panel">
+    <div class="info-panel-head">
+      <h3 class="info-panel-title">업데이트 안내</h3>
+      <span class="count-chip">1건</span>
+    </div>
+    <div class="info-panel-body">
+      <div class="info-card emphasis">
+        <p class="info-card-title">Agentic Toolkit Installer 대비 및 설치된 스킬 갱신</p>
+        <p class="info-card-text">이번 릴리즈는 일부 Polyspace 제품만 설치된 환경을 포함하여 Agentic Toolkit Installer를 위해 Polyspace Agentic Toolkit을 준비합니다. 설치된 스킬을 업데이트하려면 설정을 다시 실행하십시오("Set up the Polyspace Agentic Toolkit").</p>
       </div>
     </div>
   </article>
@@ -1125,7 +1168,7 @@
     </main>
   </div>
 
-  <footer class="site-footer">Agentic Engineering Newsletter &middot; Build 2026-11-05</footer>
+  <footer class="site-footer">Agentic Engineering Newsletter &middot; Build 2026-11-11</footer>
 
   <script>
     const sectionLinks = Array.from(document.querySelectorAll('.side-nav a'));
